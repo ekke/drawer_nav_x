@@ -107,7 +107,7 @@ ApplicationWindow {
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Flight", "icon": "flight.png", "source": "../pages/PageFive.qml"},
         {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Settings", "icon": "settings.png", "source": "../pages/SettingsPage.qml"},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Color Schema", "icon": "directions.png", "source": "../pages/ColorSchemaPage.qml"},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Color Schema", "icon": "colors.png", "source": "../pages/ColorSchemaPage.qml"},
         {"type": "../navigation/DrawerNavigationTextButton.qml", "name": "About this App", "icon": "", "source": "../pages/AboutPage.qml"}
         ]
     property int navigationIndex: 0
