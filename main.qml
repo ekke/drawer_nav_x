@@ -115,6 +115,7 @@ ApplicationWindow {
         }
     }
     property bool navigationBarIsColored: true
+    property bool highlightActiveNavigationButton : true
 
     // header only used in PORTRAIT to provide a fixed TitleBar
     header: isLandscape || hideTitleBar ? null : titleBar

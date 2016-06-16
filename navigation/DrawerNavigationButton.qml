@@ -14,6 +14,15 @@ ToolButton {
     focusPolicy: Qt.NoFocus
     height: 48
     width: myBar.width
+
+    // Material.buttonPressColor
+    Rectangle {
+        visible: highlightActiveNavigationButton && myButton.isActive
+        height: myButton.height
+        width: myButton.width
+        color:  Material.listHighlightColor
+    }
+
     Row {
         spacing: 0
         topPadding: 0
