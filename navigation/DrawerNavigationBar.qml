@@ -52,6 +52,17 @@ Drawer {
                 // space between content - see google material guide
                 height: 8
             }
+            Item {
+                width: 48
+                height: 48
+                x: 16
+                y: 12
+                IconColored {
+                    imageName: "directions.png"
+                    imageSize: 48
+                    color: textOnPrimary
+                }
+            }
         }
         Item {
             // space between content - see google material guide
