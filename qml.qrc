@@ -51,5 +51,7 @@
         <file>pages/SettingsPage.qml</file>
         <file>pages/ColorSchemaPage.qml</file>
         <file>pages/AboutPage.qml</file>
+        <file>navigation/DrawerSubtitle.qml</file>
+        <file>navigation/DrawerNavigationTextButton.qml</file>
     </qresource>
 </RCC>

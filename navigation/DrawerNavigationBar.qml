@@ -38,12 +38,12 @@ Drawer {
                     leftPadding: 16
                     rightPadding: 16
                     LabelBody {
-                        text: "first Line"
+                        text: "ekke's Example APPs"
                         font.weight: Font.Medium
                         color: textOnPrimary
                     }
                     LabelBody {
-                        text: "second line"
+                        text: "@ekkescorner"
                         color: textOnPrimary
                     }
                 }

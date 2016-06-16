@@ -99,6 +99,7 @@ ApplicationWindow {
     property var navigationModel: [
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Home", "icon": "home.png", "source": "../pages/HomePage.qml"},
         {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""},
+        {"type": "../navigation/DrawerSubtitle.qml", "name": "Transitoptions", "icon": "", "source": ""},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Car", "icon": "car.png", "source": "../pages/PageOne.qml"},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Bus", "icon": "bus.png", "source": "../pages/PageTwo.qml"},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Subway", "icon": "subway.png", "source": "../pages/PageThree.qml"},
@@ -107,7 +108,7 @@ ApplicationWindow {
         {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Settings", "icon": "settings.png", "source": "../pages/SettingsPage.qml"},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Color Schema", "icon": "directions.png", "source": "../pages/ColorSchemaPage.qml"},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "About this App", "icon": "", "source": "../pages/AboutPage.qml"}
+        {"type": "../navigation/DrawerNavigationTextButton.qml", "name": "About this App", "icon": "", "source": "../pages/AboutPage.qml"}
         ]
     property int navigationIndex: 0
     onNavigationIndexChanged: {
