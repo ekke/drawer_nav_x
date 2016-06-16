@@ -10,6 +10,7 @@ ToolButton {
     id: myButton
     property bool isActive: index == navigationIndex
     property string myIconFolder: iconFolder
+    Layout.fillWidth: true
     Layout.alignment: Qt.AlignHCenter
     focusPolicy: Qt.NoFocus
     height: 48

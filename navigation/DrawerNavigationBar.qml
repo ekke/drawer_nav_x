@@ -48,21 +48,23 @@ Drawer {
                     }
                 }
             }
+            Item {
+                // space between content - see google material guide
+                height: 8
+            }
         }
         Item {
-            height: 16
+            // space between content - see google material guide
+            height: 8
         }
-
         Repeater {
             model: navigationModel
-            DrawerNavigationButton {
-                id: myButton
+            Loader {
                 Layout.fillWidth: true
+                source: modelData.type
+                active: true
             }
         } // repeater
-
-        HorizontalDivider {
-        }
         //
     } // ColumnLayout
     VerticalDivider{

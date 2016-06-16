@@ -46,5 +46,7 @@
         <file>pages/InitialItemPage.qml</file>
         <file>popups/PopupToast.qml</file>
         <file>navigation/DrawerNavigationBar.qml</file>
+        <file>pages/HomePage.qml</file>
+        <file>navigation/DrawerDivider.qml</file>
     </qresource>
 </RCC>

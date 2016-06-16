@@ -96,11 +96,15 @@ ApplicationWindow {
     //
 
     // NAVIGATION BAR PROPRTIES
-    property var navigationModel: [{"name": "Car", "icon": "car.png", "source": "../pages/PageOne.qml"},
-        {"name": "Bus", "icon": "bus.png", "source": "../pages/PageTwo.qml"},
-        {"name": "Subway", "icon": "subway.png", "source": "../pages/PageThree.qml"},
-        {"name": "Truck", "icon": "truck.png", "source": "../pages/PageFour.qml"},
-        {"name": "Flight", "icon": "flight.png", "source": "../pages/PageFive.qml"}]
+    property var navigationModel: [
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Home", "icon": "home.png", "source": "../pages/HomePage.qml"},
+        {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Car", "icon": "car.png", "source": "../pages/PageOne.qml"},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Bus", "icon": "bus.png", "source": "../pages/PageTwo.qml"},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Subway", "icon": "subway.png", "source": "../pages/PageThree.qml"},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Truck", "icon": "truck.png", "source": "../pages/PageFour.qml"},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Flight", "icon": "flight.png", "source": "../pages/PageFive.qml"},
+        {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""}]
     property int navigationIndex: 0
     onNavigationIndexChanged: {
         rootPane.activeDestination(navigationIndex)
