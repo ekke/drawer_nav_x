@@ -31,23 +31,25 @@ ToolButton {
         rightPadding: 16
         anchors.verticalCenter: parent.verticalCenter
         Item {
+            id: myImageItem
+            visible: modelData.icon.length > 0
             anchors.verticalCenter: parent.verticalCenter
             width: 24 + 32
             height: 24
             Image {
-                id: contentImage
+                id: myImage
                 width: 24
                 height: 24
                 horizontalAlignment: Image.AlignLeft
                 anchors.verticalCenter: parent.verticalCenter
-                source: "qrc:/images/"+myIconFolder+"/"+modelData.icon
+                source: myImageItem.visible? "qrc:/images/"+myIconFolder+"/"+modelData.icon : ""
                 opacity: isActive? myBar.activeOpacity : myBar.inactiveOpacity
             }
             ColorOverlay {
                 id: colorOverlay
                 visible: myButton.isActive
-                anchors.fill: contentImage
-                source: contentImage
+                anchors.fill: myImage
+                source: myImage
                 color: primaryColor
             }
         } // image and coloroverlay

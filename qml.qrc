@@ -48,5 +48,8 @@
         <file>navigation/DrawerNavigationBar.qml</file>
         <file>pages/HomePage.qml</file>
         <file>navigation/DrawerDivider.qml</file>
+        <file>pages/SettingsPage.qml</file>
+        <file>pages/ColorSchemaPage.qml</file>
+        <file>pages/AboutPage.qml</file>
     </qresource>
 </RCC>
