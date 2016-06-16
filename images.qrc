@@ -424,5 +424,37 @@
         <file>images/white/x48/stars@2x.png</file>
         <file>images/white/x48/stars@3x.png</file>
         <file>images/white/x48/stars@4x.png</file>
+        <file>images/black/menu.png</file>
+        <file>images/black/menu@2x.png</file>
+        <file>images/black/menu@3x.png</file>
+        <file>images/black/menu@4x.png</file>
+        <file>images/black/x18/menu.png</file>
+        <file>images/black/x18/menu@2x.png</file>
+        <file>images/black/x18/menu@3x.png</file>
+        <file>images/black/x18/menu@4x.png</file>
+        <file>images/black/x36/menu.png</file>
+        <file>images/black/x36/menu@2x.png</file>
+        <file>images/black/x36/menu@3x.png</file>
+        <file>images/black/x36/menu@4x.png</file>
+        <file>images/black/x48/menu.png</file>
+        <file>images/black/x48/menu@2x.png</file>
+        <file>images/black/x48/menu@3x.png</file>
+        <file>images/black/x48/menu@4x.png</file>
+        <file>images/white/menu.png</file>
+        <file>images/white/menu@2x.png</file>
+        <file>images/white/menu@3x.png</file>
+        <file>images/white/menu@4x.png</file>
+        <file>images/white/x18/menu.png</file>
+        <file>images/white/x18/menu@2x.png</file>
+        <file>images/white/x18/menu@3x.png</file>
+        <file>images/white/x18/menu@4x.png</file>
+        <file>images/white/x36/menu.png</file>
+        <file>images/white/x36/menu@2x.png</file>
+        <file>images/white/x36/menu@3x.png</file>
+        <file>images/white/x36/menu@4x.png</file>
+        <file>images/white/x48/menu.png</file>
+        <file>images/white/x48/menu@2x.png</file>
+        <file>images/white/x48/menu@3x.png</file>
+        <file>images/white/x48/menu@4x.png</file>
     </qresource>
 </RCC>
