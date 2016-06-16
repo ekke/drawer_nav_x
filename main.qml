@@ -133,7 +133,7 @@ ApplicationWindow {
         id: titleBar
         visible: !isLandscape && !hideTitleBar
         active: !isLandscape && !hideTitleBar
-        source: "common/SimpleTextTitle.qml"
+        source: "navigation/DrawerTitleBar.qml"
         onLoaded: {
             if(item) {
                 item.text = qsTr("From Drawer to Destinations")
@@ -153,7 +153,7 @@ ApplicationWindow {
         // anchors.leftMargin: sideBar.width+6
         anchors.right: parent.right
         active: isLandscape && !hideTitleBar
-        source: "common/SimpleTextTitle.qml"
+        source: "navigation/DrawerTitleBar.qml"
         onLoaded: {
             if(item) {
                 item.text = qsTr("From Drawer to Destinations")
@@ -161,21 +161,21 @@ ApplicationWindow {
         }
     }
 
-    FloatingActionButton {
-        id: fab
-        // will become visible as soon as first Destination loaded
-        visible: false
-        property string imageName: "/settings.png"
-        z: 1
-        anchors.margins: 16
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        imageSource: "qrc:/images/"+iconOnAccentFolder+imageName
-        backgroundColor: accentColor
-        onClicked: {
-            showSettings()
-        }
-    } // FAB
+//    FloatingActionButton {
+//        id: fab
+//        // will become visible as soon as first Destination loaded
+//        visible: false
+//        property string imageName: "/settings.png"
+//        z: 1
+//        anchors.margins: 16
+//        anchors.right: parent.right
+//        anchors.bottom: parent.bottom
+//        imageSource: "qrc:/images/"+iconOnAccentFolder+imageName
+//        backgroundColor: accentColor
+//        onClicked: {
+//            showSettings()
+//        }
+//    } // FAB
 
     DrawerNavigationBar {
         id: navigationBar
@@ -288,7 +288,7 @@ ApplicationWindow {
             }
         }
         function firstDestinationLoaded() {
-            fab.visible = true
+            // fab.visible = true
         }
 
         function activeDestination(navigationIndex) {

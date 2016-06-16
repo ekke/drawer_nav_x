@@ -62,5 +62,6 @@ ToolButton {
     } // row
     onClicked: {
         navigationIndex = index
+        navigationBar.close()
     }
 } // myButton

@@ -53,5 +53,6 @@
         <file>pages/AboutPage.qml</file>
         <file>navigation/DrawerSubtitle.qml</file>
         <file>navigation/DrawerNavigationTextButton.qml</file>
+        <file>navigation/DrawerTitleBar.qml</file>
     </qresource>
 </RCC>
