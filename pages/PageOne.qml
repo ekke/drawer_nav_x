@@ -25,9 +25,26 @@ Flickable {
                 leftPadding: 10
                 text: qsTr("Drive by Car")
             }
-            IconInactive {
-                imageName: modelData.icon
-                imageSize: 48
+            RowLayout {
+                IconInactive {
+                    imageName: modelData.icon
+                    imageSize: 48
+                }
+                LabelSubheading {
+                    id: availableCars
+                    text: qsTr("Available Cars: ")+ navigationData[3].counter
+                }
+                LabelSubheading {
+                }
+
+                ButtonIconActive {
+                    imageName: modelData.icon
+                    imageSize: 48
+                    onClicked: {
+                        rootPane.increaseCars()
+                        availableCars.text = qsTr("Available Cars: ")+ navigationData[3].counter
+                    }
+                }
             }
             HorizontalDivider {}
             RowLayout {

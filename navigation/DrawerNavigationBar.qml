@@ -10,6 +10,7 @@ Drawer {
     id: myBar
     z: 1
     leftPadding: 0
+    property alias navigationButtons: navigationButtonRepeater
     property real activeOpacity: iconFolder == "black" ?  0.87 : 1.0
     property real inactiveOpacity: iconFolder == "black" ?  0.56 : 0.87 //  0.26 : 0.56
     width: Math.min(240,  Math.min(appWindow.width, appWindow.height) / 3 * 2 )
@@ -69,6 +70,7 @@ Drawer {
             height: 8
         }
         Repeater {
+            id: navigationButtonRepeater
             model: navigationModel
             Loader {
                 Layout.fillWidth: true

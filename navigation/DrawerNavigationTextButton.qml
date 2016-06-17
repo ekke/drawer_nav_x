@@ -10,6 +10,7 @@ ToolButton {
     id: myButton
     property bool isActive: index == navigationIndex
     property string myIconFolder: iconFolder
+    property int counter: navigationData[index].counter
     Layout.fillWidth: true
     Layout.alignment: Qt.AlignHCenter
     focusPolicy: Qt.NoFocus
@@ -44,7 +45,7 @@ ToolButton {
         visible: modelData.showCounter
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.right
-        text: navigationData[index].counter
+        text: counter
         opacity: 0.87 // isActive? 1.0 : 0.7
         color: isActive? primaryColor : dividerColor // flatButtonTextColor
         font.pixelSize: 14

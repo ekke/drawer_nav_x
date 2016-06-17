@@ -302,6 +302,12 @@ ApplicationWindow {
             }
         }
 
+        function increaseCars() {
+            var counter = navigationData[3].counter + 1
+            navigationData[3].counter = counter
+            navigationBar.navigationButtons.itemAt(3).item.counter = counter
+        }
+
     } // rootPane
 
 
