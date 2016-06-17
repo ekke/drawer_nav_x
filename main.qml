@@ -128,16 +128,11 @@ ApplicationWindow {
     onNavigationIndexChanged: {
         rootPane.activeDestination(navigationIndex)
     }
-    // recommended: suppress if more then 3 buttons, perhaps only on Android
-    property bool suppressInactiveLabels: navigationModel.length > 3
     property bool hideTitleBar: false
     onHideTitleBarChanged: {
-        if(isLandscape) {
-            sideBar.active = false
-            sideBar.active = isLandscape
-        }
+        //
     }
-    property bool navigationBarIsColored: true
+    property bool showFavorites: false
     property bool highlightActiveNavigationButton : true
 
     // header only used in PORTRAIT to provide a fixed TitleBar
@@ -342,9 +337,6 @@ ApplicationWindow {
         popupInfo.buttonText = qsTr("OK")
         popupInfo.open()
     }
-    function showSettings() {
-        popupSettings.open()
-    }
 
     PopupInfo {
         id: popupInfo
@@ -353,18 +345,6 @@ ApplicationWindow {
             resetFocus()
         }
     } // popupInfo
-
-    // PopupSettings
-    PopupSettings {
-        id: popupSettings
-        onAboutToHide: {
-            if(popupSettings.update()) {
-                popupToast.start(qsTr("Settings modified"))
-            } else {
-                resetFocus()
-            }
-        }
-    } // popupSettings
 
     // PopupToast
     PopupToast {

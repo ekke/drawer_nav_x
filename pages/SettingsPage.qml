@@ -8,22 +8,23 @@ import QtGraphicalEffects 1.0
 import "../common"
 
 Flickable {
-    id: flickable
-    contentHeight: root.implicitHeight
+    contentHeight: root.height
     // StackView manages this, so please no anchors here
     // anchors.fill: parent
-    property string name: "Settings"
-    property string title: qsTr("Settings")
+    clip: true
 
     Pane {
         id: root
         anchors.fill: parent
+        padding: 24
+
         ColumnLayout {
+            id: theContent
             anchors.right: parent.right
             anchors.left: parent.left
             LabelHeadline {
                 leftPadding: 10
-                text: qsTr("The Settings Page")
+                text: qsTr("Settings Drawer Navigation")
             }
             IconInactive {
                 imageName: modelData.icon
@@ -31,30 +32,57 @@ Flickable {
             }
             HorizontalDivider {}
             RowLayout {
-                LabelSubheading {
+                Switch {
+                    focusPolicy: Qt.NoFocus
                     topPadding: 6
-                    leftPadding: 10
-                    rightPadding: 10
-                    wrapMode: Text.WordWrap
-                    text: qsTr("Navigate between Destinations:\n* Tap on a Button from ToolBar at Bottom (Portrait) or left side (Landscape)\n\nTap on 'Settings' Button to configure Navigation\n\nFrom 'Option Menu' (three dots) placed top right in Title you can switch Theme and change primary / accent colors\n\nIn Landscape mode Title is scrollable.\n\nBluetooth keyboard attached or BlackBerry PRIV?\n* Type '1', '2', '3', '4', '5' to go to Button 1...5")
-                }
-            }
-            HorizontalDivider {}
+                    leftPadding: 12
+                    text: qsTr("Highlight Active Navigation Selection")
+                    checked: highlightActiveNavigationButton
+                    onCheckedChanged: {
+                        highlightActiveNavigationButton = checked
+                    }
+                } // switch highlightActiveNavigationButton
+            } // row switch highlightActiveNavigationButton
+            RowLayout {
+                Switch {
+                    focusPolicy: Qt.NoFocus
+                    leftPadding: 12
+                    text: qsTr("Hide TitleBar")
+                    checked: hideTitleBar
+                    onCheckedChanged: {
+                        hideTitleBar = checked
+                    }
+                } // switch hideTitleBar
+            } // row switch hideTitleBar
+            RowLayout {
+                Switch {
+                    focusPolicy: Qt.NoFocus
+                    leftPadding: 12
+                    text: qsTr("Show Favorites at Bottom in Portrait")
+                    checked: showFavorites
+                    onCheckedChanged: {
+                        showFavorites = checked
+                    }
+                } // switch showFavorites
+            } // row switch showFavorites
+
         } // col layout
+
     } // root
+
     ScrollIndicator.vertical: ScrollIndicator { }
 
-    // emitting a Signal could be another option
     Component.onDestruction: {
         cleanup()
     }
 
     // called immediately after Loader.loaded
     function init() {
-        console.log(qsTr("Init done from One [0]"))
+        console.log(qsTr("Init done from Settings"))
     }
     // called from Component.destruction
     function cleanup() {
-        console.log(qsTr("Cleanup done from One [0]"))
+        console.log(qsTr("Cleanup done from Settings"))
     }
+
 } // flickable

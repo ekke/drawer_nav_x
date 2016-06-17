@@ -36,7 +36,6 @@
         <file>tabs/TabButtonTextAndIcon.qml</file>
         <file>tabs/TitleAndIconTabBar.qml</file>
         <file>tabs/TitleAndIconTextTabBar.qml</file>
-        <file>popups/PopupSettings.qml</file>
         <file>tabs/TitleWithTabBar.qml</file>
         <file>tabs/TitleWithIconTabBar.qml</file>
         <file>tabs/TitleWithIconTextTabBar.qml</file>
