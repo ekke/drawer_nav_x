@@ -55,5 +55,6 @@
         <file>navigation/DrawerTitleBar.qml</file>
         <file>navigation/DrawerFavoritesNavigationButton.qml</file>
         <file>navigation/DrawerFavoritesNavigationBar.qml</file>
+        <file>navigation/DrawerFavoritesMenuButton.qml</file>
     </qresource>
 </RCC>

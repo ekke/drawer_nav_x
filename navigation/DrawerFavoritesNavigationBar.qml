@@ -24,12 +24,12 @@ Pane {
         anchors.right: parent.right
         spacing: 0
         // MENU Button
-        // TBD
+        DrawerFavoritesMenuButton {
+        }
         Repeater {
             model: favoritesModel
             DrawerFavoritesNavigationButton {
                 id: myButton
-                isColored: true
             }
         } // repeater
     } // RowLayout

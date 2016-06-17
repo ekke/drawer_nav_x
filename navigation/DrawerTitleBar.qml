@@ -13,6 +13,10 @@ ToolBar {
         focus: false
         spacing: 6
         anchors.fill: parent
+        Item {
+            width: 4
+        }
+
         ToolButton {
             focusPolicy: Qt.NoFocus
             Image {
