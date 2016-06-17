@@ -28,7 +28,7 @@ ToolButton {
         spacing: 0
         topPadding: 0
         leftPadding: 16
-        rightPadding: 16
+        rightPadding: modelData.showCounter? 24 :  16
         anchors.verticalCenter: parent.verticalCenter
         Item {
             anchors.verticalCenter: parent.verticalCenter
@@ -60,6 +60,24 @@ ToolButton {
             font.weight: Font.Medium
         } // label
     } // row
+    Label {
+        rightPadding: 16
+        visible: modelData.showCounter
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        text: navigationData[index].counter
+        opacity: 0.87 // isActive? 1.0 : 0.7
+        color: isActive? primaryColor : dividerColor // flatButtonTextColor
+        font.pixelSize: 14
+        font.weight: Font.Medium
+    } // label
+    Rectangle {
+        visible: modelData.showMarker
+        anchors.right: parent.right
+        width: 6
+        height: parent.height
+        color: navigationData[index].marker
+    }
     onClicked: {
         navigationIndex = index
         navigationBar.close()
