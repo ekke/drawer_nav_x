@@ -31,14 +31,8 @@
         <file>common/StackTextTitle.qml</file>
         <file>common/SwipeTextTitle.qml</file>
         <file>popups/PopupInfo.qml</file>
-        <file>tabs/TitleAndTabBar.qml</file>
         <file>tabs/TabButtonIcon.qml</file>
         <file>tabs/TabButtonTextAndIcon.qml</file>
-        <file>tabs/TitleAndIconTabBar.qml</file>
-        <file>tabs/TitleAndIconTextTabBar.qml</file>
-        <file>tabs/TitleWithTabBar.qml</file>
-        <file>tabs/TitleWithIconTabBar.qml</file>
-        <file>tabs/TitleWithIconTextTabBar.qml</file>
         <file>common/ButtonIconActive.qml</file>
         <file>navigation/Destination.qml</file>
         <file>navigation/DrawerNavigationButton.qml</file>
