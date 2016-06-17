@@ -124,6 +124,10 @@ ApplicationWindow {
         {"counter":0, "marker":""},
         {"counter":0, "marker":""}
     ]
+    // menu plus max 4 from drawer: home, car, flight, settings
+    property var favoritesModel: [
+        0, 3, 7, 9
+    ]
     property int navigationIndex: 0
     onNavigationIndexChanged: {
         rootPane.activeDestination(navigationIndex)
@@ -137,6 +141,8 @@ ApplicationWindow {
 
     // header only used in PORTRAIT to provide a fixed TitleBar
     header: isLandscape || hideTitleBar ? null : titleBar
+
+    footer: showFavorites && !isLandscape && navigationBar.position == 0 ? favoritesBar : null
 
     Loader {
         id: titleBar
@@ -173,6 +179,10 @@ ApplicationWindow {
     DrawerNavigationBar {
         id: navigationBar
     } // navigationBar
+    DrawerFavoritesNavigationBar {
+        id: favoritesBar
+        visible: showFavorites && !isLandscape && navigationBar.position == 0
+    }
 
 
     StackView {

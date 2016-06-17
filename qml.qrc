@@ -53,5 +53,7 @@
         <file>navigation/DrawerSubtitle.qml</file>
         <file>navigation/DrawerNavigationTextButton.qml</file>
         <file>navigation/DrawerTitleBar.qml</file>
+        <file>navigation/DrawerFavoritesNavigationButton.qml</file>
+        <file>navigation/DrawerFavoritesNavigationBar.qml</file>
     </qresource>
 </RCC>
