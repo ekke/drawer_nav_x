@@ -170,22 +170,6 @@ ApplicationWindow {
         }
     }
 
-//    FloatingActionButton {
-//        id: fab
-//        // will become visible as soon as first Destination loaded
-//        visible: false
-//        property string imageName: "/settings.png"
-//        z: 1
-//        anchors.margins: 16
-//        anchors.right: parent.right
-//        anchors.bottom: parent.bottom
-//        imageSource: "qrc:/images/"+iconOnAccentFolder+imageName
-//        backgroundColor: accentColor
-//        onClicked: {
-//            showSettings()
-//        }
-//    } // FAB
-
     DrawerNavigationBar {
         id: navigationBar
     } // navigationBar
