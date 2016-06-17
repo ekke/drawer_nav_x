@@ -12,8 +12,8 @@ Page {
     id: navPage
 
     property bool tabBarIsFixed: true
-    property var tabButtonModel: [{"name": "Primary Color"},
-        {"name": "Accent Color"},
+    property var tabButtonModel: [{"name": "Primary"},
+        {"name": "Accent"},
         {"name": "Theme"}]
 
     header: isLandscape? null : tabBar
