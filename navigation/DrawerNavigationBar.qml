@@ -15,36 +15,58 @@ Drawer {
     property real inactiveOpacity: iconFolder == "black" ?  0.56 : 0.87 //  0.26 : 0.56
     width: Math.min(240,  Math.min(appWindow.width, appWindow.height) / 3 * 2 )
     height: appWindow.height
-    ColumnLayout {
-        id: myButtons
-        focus: false
-        anchors.left: parent.left
-        anchors.right: parent.right
-        spacing: 0
-        Item {
+
+    Flickable {
+        contentHeight: myButtons.height
+        anchors.fill: parent
+        clip: true
+
+        ColumnLayout {
+            id: myButtons
+            focus: false
             anchors.left: parent.left
             anchors.right: parent.right
-            height: 120
-            Rectangle {
-                anchors.fill: parent
-                color: primaryColor
-            }
+            spacing: 0
             Item {
                 anchors.left: parent.left
                 anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                height: 56
-                Column {
-                    anchors.verticalCenter: parent.verticalCenter
-                    leftPadding: 16
-                    rightPadding: 16
-                    LabelBody {
-                        text: "ekke's Example APPs"
-                        font.weight: Font.Medium
-                        color: textOnPrimary
+                height: 120
+                Rectangle {
+                    anchors.fill: parent
+                    color: primaryColor
+                }
+                Item {
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+                    height: 56
+                    Column {
+                        anchors.verticalCenter: parent.verticalCenter
+                        leftPadding: 16
+                        rightPadding: 16
+                        LabelBody {
+                            text: "ekke's Example APPs"
+                            font.weight: Font.Medium
+                            color: textOnPrimary
+                        }
+                        LabelBody {
+                            text: "@ekkescorner"
+                            color: textOnPrimary
+                        }
                     }
-                    LabelBody {
-                        text: "@ekkescorner"
+                }
+                Item {
+                    // space between content - see google material guide
+                    height: 8
+                }
+                Item {
+                    width: 48
+                    height: 48
+                    x: 16
+                    y: 12
+                    IconColored {
+                        imageName: "directions.png"
+                        imageSize: 48
                         color: textOnPrimary
                     }
                 }
@@ -53,35 +75,19 @@ Drawer {
                 // space between content - see google material guide
                 height: 8
             }
-            Item {
-                width: 48
-                height: 48
-                x: 16
-                y: 12
-                IconColored {
-                    imageName: "directions.png"
-                    imageSize: 48
-                    color: textOnPrimary
+            Repeater {
+                id: navigationButtonRepeater
+                model: navigationModel
+                Loader {
+                    Layout.fillWidth: true
+                    source: modelData.type
+                    active: true
                 }
-            }
-        }
-        Item {
-            // space between content - see google material guide
-            height: 8
-        }
-        Repeater {
-            id: navigationButtonRepeater
-            model: navigationModel
-            Loader {
-                Layout.fillWidth: true
-                source: modelData.type
-                active: true
-            }
-        } // repeater
-        //
-    } // ColumnLayout
-    VerticalDivider{
-        id: myBarDivider
-        anchors.left: myButtons.right
-    }
-} // sideNavigationBar
+            } // repeater
+            //
+        } // ColumnLayout myButtons
+        ScrollIndicator.vertical: ScrollIndicator { }
+
+    } // Flickable
+
+} // drawer
