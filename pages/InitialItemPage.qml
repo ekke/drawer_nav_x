@@ -13,7 +13,7 @@ Pane {
         topPadding: 12
         wrapMode: Label.WordWrap
         horizontalAlignment: Qt.AlignHCenter
-        text: "Welcome to ekkes APP demonstrating Bottom and Side Navigation"
+        text: "Welcome to ekkes APP demonstrating Navigation by Drawer and Favorites-at-Bottom"
     }
     BusyIndicator {
         topPadding: 24
