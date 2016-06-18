@@ -8,18 +8,15 @@ import "../common"
 
 Pane {
     id: myBar
+    Material.elevation: 8
     z: 1
     property real activeOpacity: iconFolder == "black" ?  0.87 : 1.0
     property real inactiveOpacity: iconFolder == "black" ? 0.26 : 0.56
     leftPadding: 0
     rightPadding: 0
-    HorizontalDivider{
-        id: myBarDivider
-    }
-    height: 56 + myBarDivider.height
+    height: 56
     RowLayout {
         focus: false
-        anchors.top: myBarDivider.bottom
         anchors.left: parent.left
         anchors.right: parent.right
         spacing: 0

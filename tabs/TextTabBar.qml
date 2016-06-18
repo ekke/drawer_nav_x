@@ -11,6 +11,7 @@ TabBar {
     Layout.fillWidth: true
     currentIndex: 0
     onCurrentIndexChanged: {
+        console.log("Tab Bar current index changed: "+ currentIndex)
         navPane.currentIndex = currentIndex
     }
     Repeater {

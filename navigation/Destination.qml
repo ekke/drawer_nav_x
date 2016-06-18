@@ -14,7 +14,7 @@ Loader {
     source: modelData.source
     onLoaded: {
         item.init()
-        rootPane.replace(item)
+        rootPane.replaceDestination(item)
         if(index == 0) {
             rootPane.firstDestinationLoaded()
         }

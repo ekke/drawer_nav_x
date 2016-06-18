@@ -8,6 +8,7 @@ import QtGraphicalEffects 1.0
 import "../common"
 
 Flickable {
+    property string name: "SettingsPage"
     contentHeight: root.height
     // StackView manages this, so please no anchors here
     // anchors.fill: parent

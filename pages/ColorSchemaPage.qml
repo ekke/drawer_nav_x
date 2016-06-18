@@ -10,6 +10,9 @@ import "../tabs"
 
 Page {
     id: navPage
+    property string name: "colorSchemaNavPage"
+    property int lastCurrentIndex: 0
+    property alias currentIndex: navPane.currentIndex
 
     property bool tabBarIsFixed: true
     property var tabButtonModel: [{"name": "Primary"},
@@ -24,6 +27,7 @@ Page {
         active: !isLandscape
         source: "../tabs/TextTabBar.qml"
         onLoaded: {
+            console.log("Tab Bar LOADED")
             if(item) {
                 item.currentIndex = navPane.currentIndex
             }
@@ -38,6 +42,7 @@ Page {
         active: isLandscape
         source: "../tabs/TextTabBar.qml"
         onLoaded: {
+            console.log("Floating Tab Bar LOADED")
             if(item) {
                 item.currentIndex = navPane.currentIndex
             }
@@ -55,6 +60,7 @@ Page {
         currentIndex: 0
         // currentIndex is the NEXT index swiped to
         onCurrentIndexChanged: {
+            console.log("Swipe View current index changed: "+currentIndex)
             if(isLandscape) {
                 tabBarFloating.item.currentIndex = currentIndex
             } else {

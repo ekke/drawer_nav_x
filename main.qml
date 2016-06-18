@@ -109,7 +109,7 @@ ApplicationWindow {
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Settings", "icon": "settings.png", "source": "../pages/SettingsPage.qml", "showCounter":false, "showMarker":false},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Color Schema", "icon": "colors.png", "source": "../pages/ColorSchemaPage.qml", "showCounter":false, "showMarker":false},
         {"type": "../navigation/DrawerNavigationTextButton.qml", "name": "About this App", "icon": "", "source": "../pages/AboutPage.qml", "showCounter":false, "showMarker":false}
-        ]
+    ]
     property var navigationData: [
         {"counter":0, "marker":""},
         {},
@@ -136,7 +136,7 @@ ApplicationWindow {
     onHideTitleBarChanged: {
         //
     }
-    property bool showFavorites: false
+    property bool showFavorites: true
     property bool highlightActiveNavigationButton : true
 
     // header only used in PORTRAIT to provide a fixed TitleBar
@@ -293,14 +293,33 @@ ApplicationWindow {
         function firstDestinationLoaded() {
             // fab.visible = true
         }
-
+        // switch to new Destination
+        // Destinations are lazy loaded via Loader
         function activeDestination(navigationIndex) {
             if(destinations.itemAt(navigationIndex).status == Loader.Ready) {
-                rootPane.replace(destinations.itemAt(navigationIndex).item)
+                console.log("replace item on root stack: "+navigationIndex)
+                replaceDestination(destinations.itemAt(navigationIndex).item)
             } else {
+                console.log("first time item to be replaced: "+navigationIndex)
                 destinations.itemAt(navigationIndex).active = true
             }
         }
+        // called from activeDestination() and also from Destination.onLoaded()
+        function replaceDestination(theItem) {
+            // check for some biz logic from OLD page
+            if(rootPane.currentItem.name == "colorSchemaNavPage") {
+                console.log("old destination colorSchemaNavPage")
+                rootPane.currentItem.lastCurrentIndex = rootPane.currentItem.currentIndex
+            }
+            // check for some biz logic to be done at NEW page
+            if(theItem.name == "colorSchemaNavPage") {
+                console.log("new destination colorSchemaNavPage")
+                theItem.currentIndex = theItem.lastCurrentIndex
+            }
+            // now replace the Page
+            rootPane.replace(theItem)
+        }
+
 
         function increaseCars() {
             var counter = navigationData[3].counter + 1

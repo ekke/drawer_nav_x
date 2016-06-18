@@ -4,6 +4,7 @@ import QtQuick.Controls 2.0
 import "../common"
 
 Pane {
+    property string name: "InitialItemPage"
     width: rootPane.width
     LabelHeadline {
         id: initLabel
