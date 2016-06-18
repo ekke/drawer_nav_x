@@ -38,7 +38,7 @@ Flickable {
                 }
 
                 ButtonIconActive {
-                    imageName: modelData.icon
+                    imageName: "add.png"
                     imageSize: 48
                     onClicked: {
                         rootPane.increaseCars()
