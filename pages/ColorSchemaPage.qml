@@ -109,14 +109,14 @@ Page {
             // index 0
             id: pageOneLoader
             active: true
-            source: "PageOne.qml"
+            source: "PrimaryColorPage.qml"
             onLoaded: item.init()
         }
         Loader {
             // index 1
             id: pageTwoLoader
             active: true
-            source: "PageTwo.qml"
+            source: "AccentColorPage.qml"
             onLoaded: item.init()
         }
         Loader {

@@ -51,5 +51,8 @@
         <file>navigation/DrawerFavoritesNavigationBar.qml</file>
         <file>navigation/DrawerFavoritesMenuButton.qml</file>
         <file>tabs/TextTabBar.qml</file>
+        <file>pages/PrimaryColorPage.qml</file>
+        <file>pages/AccentColorPage.qml</file>
+        <file>pages/ThemePage.qml</file>
     </qresource>
 </RCC>
