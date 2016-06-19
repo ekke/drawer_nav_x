@@ -5,6 +5,7 @@ import "../common"
 
 Pane {
     property string name: "InitialItemPage"
+    property int myIndex: -1
     width: rootPane.width
     LabelHeadline {
         id: initLabel

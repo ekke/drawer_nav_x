@@ -7,16 +7,16 @@ import "../pages"
 // special Loader to load Destinations:
 // Pages, Panes, StackView, SwipeView, TabBar
 // loaded from Navigation at root: Bottom/Side Navigation or Drawer
-// content at root is StackView with only one always replaced item
+// root is StackView with only one Item, always replaced()
 Loader {
     id: pageLoader
-    active: false
+    property int pageActivationPolicy: modelData.a_p
+    active: pageActivationPolicy == activationPolicy.IMMEDIATELY
     source: modelData.source
     onLoaded: {
         item.init()
-        rootPane.replaceDestination(item)
-        if(index == 0) {
-            rootPane.firstDestinationLoaded()
+        if(pageActivationPolicy != activationPolicy.IMMEDIATELY) {
+            rootPane.replaceDestination(pageLoader)
         }
     }
 }

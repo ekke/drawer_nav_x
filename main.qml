@@ -94,21 +94,28 @@ ApplicationWindow {
     property real opacityBodySecondary: secondaryTextOpacity
     property real opacityCaption: secondaryTextOpacity
     //
+    // TODO C++ ENUM
+    // Destination
+    // TabBar-SwipeView
+    // StackView
+    property var activationPolicy: {
+        "NONE":0, "IMMEDIATELY":1, "LAZY":2, "WHILE_CURRENT":3
+    }
 
-    // NAVIGATION BAR PROPRTIES
+    // NAVIGATION BAR PROPRTIES (a_p == activationPolicy)
     property var navigationModel: [
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Home", "icon": "home.png", "source": "../navigation/HomeNavigation.qml", "showCounter":false, "showMarker":false},
-        {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""},
-        {"type": "../navigation/DrawerSubtitle.qml", "name": "Transitoptions", "icon": "", "source": ""},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Car", "icon": "car.png", "source": "../pages/PageOne.qml", "showCounter":true, "showMarker":false},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Bus", "icon": "bus.png", "source": "../pages/PageTwo.qml", "showCounter":false, "showMarker":false},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Subway", "icon": "subway.png", "source": "../pages/PageThree.qml", "showCounter":false, "showMarker":true},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Truck", "icon": "truck.png", "source": "../pages/PageFour.qml", "showCounter":false, "showMarker":false},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Flight", "icon": "flight.png", "source": "../pages/PageFive.qml", "showCounter":false, "showMarker":true},
-        {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Settings", "icon": "settings.png", "source": "../pages/SettingsPage.qml", "showCounter":false, "showMarker":false},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Color Schema", "icon": "colors.png", "source": "../pages/ColorSchemaPage.qml", "showCounter":false, "showMarker":false},
-        {"type": "../navigation/DrawerNavigationTextButton.qml", "name": "About this App", "icon": "", "source": "../pages/AboutPage.qml", "showCounter":false, "showMarker":false}
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Home", "icon": "home.png", "source": "../navigation/HomeNavigation.qml", "showCounter":false, "showMarker":false, "a_p":1},
+        {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": "", "a_p":1},
+        {"type": "../navigation/DrawerSubtitle.qml", "name": "Transitoptions", "icon": "", "source": "", "a_p":1},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Car", "icon": "car.png", "source": "../pages/PageOne.qml", "showCounter":true, "showMarker":false, "a_p":2},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Bus", "icon": "bus.png", "source": "../pages/PageTwo.qml", "showCounter":false, "showMarker":false, "a_p":2},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Subway", "icon": "subway.png", "source": "../pages/PageThree.qml", "showCounter":false, "showMarker":true, "a_p":3},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Truck", "icon": "truck.png", "source": "../pages/PageFour.qml", "showCounter":false, "showMarker":false, "a_p":2},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Flight", "icon": "flight.png", "source": "../pages/PageFive.qml", "showCounter":false, "showMarker":true, "a_p":1},
+        {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": "", "a_p":1},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Settings", "icon": "settings.png", "source": "../pages/SettingsPage.qml", "showCounter":false, "showMarker":false, "a_p":2},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Color Schema", "icon": "colors.png", "source": "../pages/ColorSchemaPage.qml", "showCounter":false, "showMarker":false, "a_p":2},
+        {"type": "../navigation/DrawerNavigationTextButton.qml", "name": "About this App", "icon": "", "source": "../pages/AboutPage.qml", "showCounter":false, "showMarker":false, "a_p":3}
     ]
     property var navigationData: [
         {"counter":0, "marker":""},
@@ -130,7 +137,7 @@ ApplicationWindow {
     ]
     property int navigationIndex: 0
     onNavigationIndexChanged: {
-        rootPane.activeDestination(navigationIndex)
+        rootPane.activateDestination(navigationIndex)
     }
     property bool hideTitleBar: false
     onHideTitleBarChanged: {
@@ -241,46 +248,56 @@ ApplicationWindow {
             id: destinations
             model: navigationModel
             // Destination encapsulates Loader
-            // in next app we'll add some policies
-            // to Destination HowTo load dynamically
+            // depends from activationPolicy how to load dynamically
             Destination {
                 id: destinationLoader
             }
             Component.onCompleted: {
-                // all destinations created
-                // load the first one
-                // from onLoaded will replace BusyIndicator
-                destinations.itemAt(0).active = true
+                // all destinations (Loader) created
+                // all destinatation items w activationPolicy IMMEDIATELY activated
+                // now show first destination (should always be IMMEDIATELY)
+                rootPane.activateDestination(0)
+                rootPane.firstDestinationLoaded()
             }
         }
         function firstDestinationLoaded() {
-            // fab.visible = true
+            // do some sepcial stuff here
+            // first page just becomes visible
         }
         // switch to new Destination
         // Destinations are lazy loaded via Loader
-        function activeDestination(navigationIndex) {
+        function activateDestination(navigationIndex) {
             if(destinations.itemAt(navigationIndex).status == Loader.Ready) {
                 console.log("replace item on root stack: "+navigationIndex)
-                replaceDestination(destinations.itemAt(navigationIndex).item)
+                replaceDestination(destinations.itemAt(navigationIndex))
             } else {
                 console.log("first time item to be replaced: "+navigationIndex)
                 destinations.itemAt(navigationIndex).active = true
             }
         }
         // called from activeDestination() and also from Destination.onLoaded()
-        function replaceDestination(theItem) {
+        function replaceDestination(theItemLoader) {
+            var previousIndex = rootPane.currentItem.myIndex
+            console.log("PREV INDEX: "+previousIndex)
+            var previousItemLoader
+            if(previousIndex >= 0) {
+                previousItemLoader  = destinations.itemAt(previousIndex)
+            }
             // check for some biz logic from OLD page
             if(rootPane.currentItem.name == "colorSchemaNavPage") {
-                console.log("old destination colorSchemaNavPage")
                 rootPane.currentItem.lastCurrentIndex = rootPane.currentItem.currentIndex
             }
             // check for some biz logic to be done at NEW page
-            if(theItem.name == "colorSchemaNavPage") {
-                console.log("new destination colorSchemaNavPage")
-                theItem.currentIndex = theItem.lastCurrentIndex
+            if(theItemLoader.item.name == "colorSchemaNavPage") {
+                theItemLoader.item.currentIndex = theItemLoader.item.lastCurrentIndex
             }
             // now replace the Page
-            rootPane.replace(theItem)
+            rootPane.replace(theItemLoader.item)
+            // check if previous should be unloaded
+
+            if(previousIndex >= 0) {
+                console.log("THE PREVIOUS ONE ? "+ previousItemLoader.item.name)
+            }
         }
 
 

@@ -9,6 +9,8 @@ import "../common"
 
 Flickable {
     property string name: "SettingsPage"
+    // index to get access to Loader (Destination)
+    property int myIndex: index
     contentHeight: root.height
     // StackView manages this, so please no anchors here
     // anchors.fill: parent

@@ -9,6 +9,8 @@ import "../common"
 
 Flickable {
     id: flickable
+    // index to get access to Loader (Destination)
+    property int myIndex: index
     contentHeight: root.implicitHeight
     // StackView manages this, so please no anchors here
     // anchors.fill: parent

@@ -10,6 +10,8 @@ import "../pages"
 StackView {
     id: navPane
     property string name: "HomeNavPane"
+    property int myIndex: index
+
     initialItem: HomePage{}
 
     Loader {

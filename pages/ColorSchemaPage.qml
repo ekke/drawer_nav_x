@@ -10,6 +10,8 @@ import "../tabs"
 
 Page {
     id: navPage
+    // index to get access to Loader (Destination)
+    property int myIndex: index
     property string name: "colorSchemaNavPage"
     property int lastCurrentIndex: 0
     property alias currentIndex: navPane.currentIndex
