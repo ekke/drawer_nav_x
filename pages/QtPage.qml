@@ -35,7 +35,7 @@ Flickable {
                     leftPadding: 10
                     rightPadding: 10
                     wrapMode: Text.WordWrap
-                    text: qsTr("Going Back to Home Page ?\nTap on the green Arrow to pop() the Page.\nIn a real-live APP the TitleBar should show the BACK Button and also Android BACK Button should be implemented.")
+                    text: qsTr("Going Back to Home Page ?\nTap on the green Arrow to pop() the Page.\nIn a real-live APP the TitleBar should show the BACK Button. (Android BACK Button is implemented)")
                 }
                 Item {
                     implicitWidth: 96

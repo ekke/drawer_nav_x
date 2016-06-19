@@ -15,6 +15,7 @@ StackView {
     Loader {
         id: qtPageLoader
         active: true
+        visible: false
         source: "../pages/QtPage.qml"
     }
 

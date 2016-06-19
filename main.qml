@@ -217,6 +217,12 @@ ApplicationWindow {
         // support of BACK key
         property bool firstPageInfoRead: false
         Keys.onBackPressed: {
+            if(navigationIndex == 0 && destinations.itemAt(navigationIndex).item.depth > 1) {
+                destinations.itemAt(navigationIndex).item.pop()
+                event.accepted = true
+                return
+            }
+
             event.accepted = !firstPageInfoRead
             // user gets Popupo Info
             // hitting again BACK will close the app
@@ -229,50 +235,7 @@ ApplicationWindow {
 
         }
 
-        // some keyboard shortcuts if:
-        // * running on BlackBerry PRIV (Slider with hardware keyboard)
-        // * or attached Bluetooth Keyboard
-        // Jump to Button 1 (w), 2 (e), 3 (r), 4 (s), 5(d)
-        Shortcut {
-            sequence: "w"
-            onActivated: navigationIndex = 0
-        }
-        Shortcut {
-            sequence: "Alt+w"
-            onActivated: navigationIndex = 0
-        }
-        Shortcut {
-            sequence: "e"
-            onActivated: navigationIndex = 1
-        }
-        Shortcut {
-            sequence: "Alt+e"
-            onActivated: navigationIndex = 1
-        }
-        Shortcut {
-            sequence: "r"
-            onActivated: navigationIndex = 2
-        }
-        Shortcut {
-            sequence: "Alt+r"
-            onActivated: navigationIndex = 2
-        }
-        Shortcut {
-            sequence: "s"
-            onActivated: navigationIndex = 3
-        }
-        Shortcut {
-            sequence: "Alt+s"
-            onActivated: navigationIndex = 3
-        }
-        Shortcut {
-            sequence: "d"
-            onActivated: navigationIndex = 4
-        }
-        Shortcut {
-            sequence: "Alt+d"
-            onActivated: navigationIndex = 4
-        }
+        // TODO some Shortcus
 
         Repeater {
             id: destinations
