@@ -23,7 +23,7 @@ Flickable {
             LabelHeadline {
                 leftPadding: 10
                 bottomPadding: 16
-                text: qsTr("The first Page")
+                text: qsTr("The Home Page")
             }
             RowLayout {
                 IconInactive {
@@ -34,7 +34,7 @@ Flickable {
                     leftPadding: 10
                     rightPadding: 10
                     wrapMode: Text.WordWrap
-                    text: qsTr("Example APP demonstrating new Qt Quick Controls 2\nThis Page is a StackView - want to push another Page on top ?\nTap on the 'Qt' Logo")                }
+                    text: qsTr("This Page is on a StackView - want to push another Page on top ?\nTap on the 'Qt' Logo")                }
                 Item {
                     implicitWidth: 96
                     implicitHeight: 96
@@ -61,7 +61,7 @@ Flickable {
                     leftPadding: 10
                     rightPadding: 10
                     wrapMode: Text.WordWrap
-                    text: qsTr("Navigate between Destinations:\n* Tap on a Button from ToolBar at Bottom (Portrait) or left side (Landscape)\n\nTap on 'Settings' Button to configure Navigation\n\nFrom 'Option Menu' (three dots) placed top right in Title you can switch Theme and change primary / accent colors\n\nIn Landscape mode Title is scrollable.\n\nBluetooth keyboard attached or BlackBerry PRIV?\n* Type '1', '2', '3', '4', '5' to go to Button 1...5")
+                    text: qsTr("Example APP demonstrating Qt Quick Controls 2\n\n")
                 }
             }
             HorizontalDivider {}
