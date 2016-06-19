@@ -53,5 +53,7 @@
         <file>pages/PrimaryColorPage.qml</file>
         <file>pages/AccentColorPage.qml</file>
         <file>pages/ThemePage.qml</file>
+        <file>navigation/HomeNavigation.qml</file>
+        <file>pages/QtPage.qml</file>
     </qresource>
 </RCC>

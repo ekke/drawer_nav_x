@@ -24,7 +24,7 @@ Flickable {
             LabelHeadline {
                 leftPadding: 10
                 bottomPadding: 16
-                text: qsTr("The first Page")
+                text: qsTr("The Qt Page")
             }
             RowLayout {
                 IconInactive {
@@ -35,7 +35,8 @@ Flickable {
                     leftPadding: 10
                     rightPadding: 10
                     wrapMode: Text.WordWrap
-                    text: qsTr("Example APP demonstrating new Qt Quick Controls 2\nThis Page is a StackView - want to push another Page on top ?\nTap on the 'Qt' Logo")                }
+                    text: qsTr("Going Back to Home Page ?\nTap on the green Arrow to pop() the Page.\nIn a real-live APP the TitleBar should show the BACK Button and also Android BACK Button should be implemented.")
+                }
                 Item {
                     implicitWidth: 96
                     implicitHeight: 96
@@ -44,12 +45,12 @@ Flickable {
                         anchors.fill: parent
                         // anchors.verticalCenterOffset: -50
                         fillMode: Image.PreserveAspectFit
-                        source: "qrc:/images/extra/qt-logo.png"
+                        source: "qrc:/images/extra/qt-arrow.png"
                     }
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            navPane.pushQtPage()
+                            navPane.pop()
                         }
                     } // mouse
                 }
@@ -77,10 +78,10 @@ Flickable {
 
     // called immediately after Loader.loaded
     function init() {
-        console.log(qsTr("Init done from Home Page"))
+        console.log(qsTr("Init done from QtPage"))
     }
     // called from Component.destruction
     function cleanup() {
-        console.log(qsTr("Cleanup done from Home Page"))
+        console.log(qsTr("Cleanup done from Qt Page"))
     }
 } // flickable

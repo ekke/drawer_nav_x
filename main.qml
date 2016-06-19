@@ -97,7 +97,7 @@ ApplicationWindow {
 
     // NAVIGATION BAR PROPRTIES
     property var navigationModel: [
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Home", "icon": "home.png", "source": "../pages/HomePage.qml", "showCounter":false, "showMarker":false},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Home", "icon": "home.png", "source": "../navigation/HomeNavigation.qml", "showCounter":false, "showMarker":false},
         {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": ""},
         {"type": "../navigation/DrawerSubtitle.qml", "name": "Transitoptions", "icon": "", "source": ""},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Car", "icon": "car.png", "source": "../pages/PageOne.qml", "showCounter":true, "showMarker":false},
