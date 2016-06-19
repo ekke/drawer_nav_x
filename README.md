@@ -13,51 +13,43 @@ This app is a follow-up to
 * blog http://bit.ly/qt-stacked-pages-x (StackView)
 * blog http://bit.ly/qt-swiped-pages-x (SwipeView)
 * blog http://bit.ly/qt-tab-pages-x (TabBar)
+* blog http://bit.ly/qt-bottom-nav-x (TabBar)
 please read these blogs and explroe corresponding apps before going on
 
-The topics of this 5th sample app:
+The topics of this 6th sample app:
 
-* Navigation with Bottom Navigation Bar
-* Navigation with SideBar in Landscape
-* Navigation with Shortcut (physical keyboard attached, per ex. BlackBerry PRIV)
-* Dark Theme and selecting primary and accent color from options menu in ToolBar
-* Lazy instantiation of Pages using Loaders
-* Try out different ways to style Navigation Bar
+* Navigation with sliding Drawer
+* - Drawer flickable, Dividers, Subheaders, Counter, colored Marker
+* Navigation with Bottom Navigation containing Favorites from Drawer
+* Using Pages, StackView, SwipeView+TabBar as Nodes
+* Dark Theme and selecting primary and accent color from ColorSchema Page
+* Lazy instantiation of Pages using Loaders with activation Policies:
+* - IMMEDIATELY, LAZY, WHILE_CURRENT
 
 Strings are marked as translatable, but not translated yet. See the first app to learn about i18n.
 
-This 5th sample app is a simple app only to demonstrate navigation through pages via Bottom Navigation.
-Bottom Navigation is new to Google Material Style and works great if your app has 3 to 5 areas.
-Bottom Navigation also looks great on iOS - esp. the uncolored version
+This 6th sample app is a simple app only to demonstrate navigation through complex APPs.
  
 read more about this app here:
-http://bit.ly/qt-bottom-nav-x
+http://bit.ly/qt-drawer-nav-x
 
-This app needs Qt 5.7 RC or greater
+This app needs Qt 5.7 Release or greater
 
 ## License Information
 [see LICENSE ( The Unlicense )](LICENSE)
 
 Images downloaded from https://design.google.com/icons/ - then renamed to match Qt High DPI images- and project-specific- naming
+(2 Images from Qt 5.7 Galelry APP in images/extra)
 
 [see /images/LICENSE ( cc-by )](images/LICENSE)
 
 ## Screenshots
 This sample app uses Material Design with UI Controls provided by Qt 5.7+ and was designed and tested on Android (BlackBerry PRIV Android 6.0.1) and iOS (iPhone 6s iOS 9.3).
 
-A detailed description you'll find at my blog: http://bit.ly/qt-tab-pages-x
+A detailed description you'll find at my blog: http://bit.ly/qt-drawer-nav-x
 
 ### Screenshot Android Portrait
-![alt tag](https://appbus.files.wordpress.com/2016/06/android_portrait.png  "Screenshot Android Portrait")
-
-### Screenshot Android Landscape
-![alt tag](https://appbus.files.wordpress.com/2016/06/android_landscape.png  "Screenshot Android Landscape")
-
-### Screenshot iOS Portrait
-![alt tag](https://appbus.files.wordpress.com/2016/06/ios_portrait.png  "Screenshot iOS Portrait")
-
-### Screenshot iOS Landscape
-![alt tag](https://appbus.files.wordpress.com/2016/06/ios_landscape.png  "Screenshot iOS Landscape")
+TBD
 
 more screenshots here:
-http://bit.ly/qt-bottom-nav-x
+http://bit.ly/qt-drawer-nav-x
