@@ -343,14 +343,6 @@ ApplicationWindow {
         rootPane.focus = true
     }
 
-    //
-    PopupPalette {
-        id: popup
-        onAboutToHide: {
-            resetFocus()
-        }
-    }
-
     function showInfo(info) {
         popupInfo.text = info
         popupInfo.buttonText = qsTr("OK")

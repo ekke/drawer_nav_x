@@ -8,6 +8,7 @@ import "../common"
 
 Page {
     id: primaryPage
+    property string name: "PrimaryColorPage"
     bottomPadding: 24
     topPadding: 16
 

@@ -5,7 +5,6 @@
         <file>common/HorizontalDivider.qml</file>
         <file>common/SwitchWithLeftLabel.qml</file>
         <file>common/SimpleTextTitle.qml</file>
-        <file>popups/PopupPalette.qml</file>
         <file>common/LabelCaption.qml</file>
         <file>common/LabelBody.qml</file>
         <file>common/LabelBodySecondary.qml</file>

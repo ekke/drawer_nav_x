@@ -8,6 +8,7 @@ import "../common"
 
 Page {
     id: accentPage
+    property string name: "AccentColorPage"
     bottomPadding: 24
     topPadding: 16
 

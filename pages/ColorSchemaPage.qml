@@ -123,7 +123,7 @@ Page {
             // index 2
             id: pageThreeLoader
             active: true
-            source: "PageThree.qml"
+            source: "ThemePage.qml"
             onLoaded: item.init()
         }
 

@@ -14,11 +14,18 @@ Pane {
     property real inactiveOpacity: iconFolder == "black" ? 0.26 : 0.56
     leftPadding: 0
     rightPadding: 0
-    height: 56
+    height: isDarkTheme? 56 + darkDivider.height : 56
+    // Using Divider as workaround for bug:
+    // Material.elevation: 8 not 'visible' if dark theme
+    HorizontalDivider {
+        id: darkDivider
+        visible: isDarkTheme
+    }
     RowLayout {
         focus: false
         anchors.left: parent.left
         anchors.right: parent.right
+        anchors.top: isDarkTheme? darkDivider.bottom : parent.top
         spacing: 0
         // MENU Button
         DrawerFavoritesMenuButton {
