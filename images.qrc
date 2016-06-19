@@ -520,5 +520,13 @@
         <file>images/white/x48/remove@2x.png</file>
         <file>images/white/x48/remove@3x.png</file>
         <file>images/white/x48/remove@4x.png</file>
+        <file>images/extra/qt-arrow.png</file>
+        <file>images/extra/qt-arrow@2x.png</file>
+        <file>images/extra/qt-arrow@3x.png</file>
+        <file>images/extra/qt-arrow@4x.png</file>
+        <file>images/extra/qt-logo.png</file>
+        <file>images/extra/qt-logo@2x.png</file>
+        <file>images/extra/qt-logo@3x.png</file>
+        <file>images/extra/qt-logo@4x.png</file>
     </qresource>
 </RCC>

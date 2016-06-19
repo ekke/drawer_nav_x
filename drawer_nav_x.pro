@@ -29,6 +29,7 @@ OTHER_FILES += images/black/*.png \
     images/white/x18/*.png \
     images/white/x36/*.png \
     images/white/x48/*.png \
+    images/extra/*.png \
     translations/*.* \
     images/LICENSE \
     LICENSE \
