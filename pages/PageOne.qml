@@ -15,7 +15,6 @@ Flickable {
     // StackView manages this, so please no anchors here
     // anchors.fill: parent
     property string name: "PageOne"
-    property string title: qsTr("Car")
 
     Pane {
         id: root
@@ -80,10 +79,10 @@ Flickable {
 
     // called immediately after Loader.loaded
     function init() {
-        console.log(qsTr("Init done from One [0]"))
+        console.log(qsTr("Init done from Car"))
     }
     // called from Component.destruction
     function cleanup() {
-        console.log(qsTr("Cleanup done from One [0]"))
+        console.log(qsTr("Cleanup done from Car"))
     }
 } // flickable

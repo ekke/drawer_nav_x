@@ -9,8 +9,7 @@ import "../common"
 Flickable {
     id: flickable
     contentHeight: root.implicitHeight
-    property string name: "ThemPage"
-    property string title: qsTr("Theme")
+    property string name: "ThemePage"
     Pane {
         id: root
         anchors.fill: parent

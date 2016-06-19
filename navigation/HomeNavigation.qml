@@ -10,6 +10,7 @@ import "../pages"
 StackView {
     id: navPane
     property string name: "HomeNavPane"
+    // index to get access to Loader (Destination)
     property int myIndex: index
 
     initialItem: HomePage{}
@@ -25,11 +26,15 @@ StackView {
         navPane.push(qtPageLoader.item)
     }
 
+    Component.onDestruction: {
+        cleanup()
+    }
+
     function init() {
-        console.log("INIT NAV Pane HOME")
+        console.log("INIT HomeNavPane")
     }
     function cleanup() {
-        console.log("CLEANUP NAV PANE HOME")
+        console.log("CLEANUP HomeNavPane")
     }
 
 } // navPane

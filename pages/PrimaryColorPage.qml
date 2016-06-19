@@ -89,10 +89,10 @@ Page {
 
     // called immediately after Loader.loaded
     function init() {
-        console.log(qsTr("Init done from Primary Color Page"))
+        console.log(qsTr("Init done from PrimaryColorPage"))
     }
     // called from Component.destruction
     function cleanup() {
-        console.log(qsTr("Cleanup done from Primary Color Page"))
+        console.log(qsTr("Cleanup done from PrimaryColorPage"))
     }
 } // end primaryPage

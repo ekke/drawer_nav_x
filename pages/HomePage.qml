@@ -13,7 +13,6 @@ Flickable {
     // StackView manages this, so please no anchors here
     // anchors.fill: parent
     property string name: "Home"
-    property string title: qsTr("Home")
 
     Pane {
         id: root

@@ -138,11 +138,16 @@ Page {
 
     } // navPane
 
+    // emitting a Signal could be another option
+    Component.onDestruction: {
+        cleanup()
+    }
+
     function init() {
-        console.log("INIT NAV PAGE color schema")
+        console.log("INIT colorSchemaNavPage")
     }
     function cleanup() {
-        console.log("CLEANUP NAV PAGE color schema")
+        console.log("CLEANUP colorSchemaNavPage")
     }
 
 } // navPage

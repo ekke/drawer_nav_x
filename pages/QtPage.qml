@@ -12,8 +12,7 @@ Flickable {
     contentHeight: root.implicitHeight
     // StackView manages this, so please no anchors here
     // anchors.fill: parent
-    property string name: "Home"
-    property string title: qsTr("Home")
+    property string name: "QtPage"
 
     Pane {
         id: root

@@ -24,4 +24,16 @@ Pane {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: initLabel.bottom
     }
+    // emitting a Signal could be another option
+    Component.onDestruction: {
+        cleanup()
+    }
+    // called immediately after Loader.loaded
+    function init() {
+        console.log(qsTr("Init done from InitialItemPage"))
+    }
+    // called from Component.destruction
+    function cleanup() {
+        console.log(qsTr("Cleanup done from InitialItemPage"))
+    }
 } // initialItem

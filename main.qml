@@ -103,6 +103,11 @@ ApplicationWindow {
     }
 
     // NAVIGATION BAR PROPRTIES (a_p == activationPolicy)
+    // IMMEDIATELY: Home, Flight
+    // LAZY: Car, Bus, Truck, ColorSchema
+    // WHILE_CURRENT: Subway, About, Settings
+    // StackView: Home --> QtPage
+    // SwipeView+TabBar: ColorSchema
     property var navigationModel: [
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Home", "icon": "home.png", "source": "../navigation/HomeNavigation.qml", "showCounter":false, "showMarker":false, "a_p":1},
         {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": "", "a_p":1},
@@ -113,10 +118,12 @@ ApplicationWindow {
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Truck", "icon": "truck.png", "source": "../pages/PageFour.qml", "showCounter":false, "showMarker":false, "a_p":2},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Flight", "icon": "flight.png", "source": "../pages/PageFive.qml", "showCounter":false, "showMarker":true, "a_p":1},
         {"type": "../navigation/DrawerDivider.qml", "name": "", "icon": "", "source": "", "a_p":1},
-        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Settings", "icon": "settings.png", "source": "../pages/SettingsPage.qml", "showCounter":false, "showMarker":false, "a_p":2},
+        {"type": "../navigation/DrawerNavigationButton.qml", "name": "Settings", "icon": "settings.png", "source": "../pages/SettingsPage.qml", "showCounter":false, "showMarker":false, "a_p":3},
         {"type": "../navigation/DrawerNavigationButton.qml", "name": "Color Schema", "icon": "colors.png", "source": "../pages/ColorSchemaPage.qml", "showCounter":false, "showMarker":false, "a_p":2},
         {"type": "../navigation/DrawerNavigationTextButton.qml", "name": "About this App", "icon": "", "source": "../pages/AboutPage.qml", "showCounter":false, "showMarker":false, "a_p":3}
     ]
+    // Counter: Car
+    // Marker: Subway, Flight
     property var navigationData: [
         {"counter":0, "marker":""},
         {},
@@ -131,7 +138,9 @@ ApplicationWindow {
         {"counter":0, "marker":""},
         {"counter":0, "marker":""}
     ]
-    // menu plus max 4 from drawer: home, car, flight, settings
+    // Menu Button
+    // plus max 4 from drawer: home, car, flight, settings
+    // favoritesModel maps to index from navigationModel
     property var favoritesModel: [
         0, 3, 7, 9
     ]
@@ -163,10 +172,6 @@ ApplicationWindow {
         }
     }
     // in LANDSCAPE header is null and we have a floating TitleBar
-    // hint: TitleBar shadow not visible in Landscape
-    // reason: TabBar must be defined inside ToolBar
-    // but they're defined in column layout - haven't redesigned for this example
-    // only wanted to demonstrate HowTo use fix and floating Titles
     Loader {
         id: titleBarFloating
         visible: isLandscape && !hideTitleBar
@@ -183,15 +188,18 @@ ApplicationWindow {
         }
     }
 
+    // The sliding Drawer
     DrawerNavigationBar {
         id: navigationBar
     } // navigationBar
+    // Bottom Toolbar (only Portrait)
     DrawerFavoritesNavigationBar {
         id: favoritesBar
         visible: showFavorites && !isLandscape && navigationBar.position == 0
     }
 
-
+    // the ROOT contains always only one Page,
+    // which will be replaced if root node changed
     StackView {
         id: rootPane
         focus: true
@@ -200,9 +208,20 @@ ApplicationWindow {
         anchors.topMargin: isLandscape && !hideTitleBar? 6 : 0
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        // shows a Busy indicator - won't be visible yet
-        // but in real life loading first Page or Pane could took some time
-        initialItem: InitialItemPage{}
+
+        // shows a Busy indicator - probably not noticed yet
+        // but in real life app loading first Page or Pane could took some time if heavy
+        initialItem: initialPlaceholder
+
+        Loader {
+            id: initialPlaceholder
+            source: "../pages/InitialItemPage.qml"
+            active: true
+            visible: false
+            onLoaded: {
+                item.init()
+            }
+        }
 
         replaceEnter: Transition {
             PropertyAnimation {
@@ -222,6 +241,8 @@ ApplicationWindow {
         }
 
         // support of BACK key
+        // can be used from StackView pushed on ROOT (HomeNavigation) tp pop()
+        // or to exit the app
         property bool firstPageInfoRead: false
         Keys.onBackPressed: {
             if(navigationIndex == 0 && destinations.itemAt(navigationIndex).item.depth > 1) {
@@ -235,7 +256,7 @@ ApplicationWindow {
             // hitting again BACK will close the app
             if(!firstPageInfoRead) {
                 firstPageInfoRead = true
-                showInfo(qsTr("Next time hitting BACK will close the app"))
+                showInfo(qsTr("Next BACK closes APP and clears Values\n\nUse 'Android Home' Button for Fast-Restart.\n\n"))
                 return
             }
             // We must cleanup loaded Pages
@@ -278,7 +299,6 @@ ApplicationWindow {
         // called from activeDestination() and also from Destination.onLoaded()
         function replaceDestination(theItemLoader) {
             var previousIndex = rootPane.currentItem.myIndex
-            console.log("PREV INDEX: "+previousIndex)
             var previousItemLoader
             if(previousIndex >= 0) {
                 previousItemLoader  = destinations.itemAt(previousIndex)
@@ -296,11 +316,15 @@ ApplicationWindow {
             // check if previous should be unloaded
 
             if(previousIndex >= 0) {
-                console.log("THE PREVIOUS ONE ? "+ previousItemLoader.item.name)
+                if(destinations.itemAt(previousIndex).pageActivationPolicy == activationPolicy.WHILE_CURRENT) {
+                    destinations.itemAt(previousIndex).active = false
+                }
+            } else {
+                initialPlaceholder.active = false
             }
         }
 
-
+        // example HowTo increase a counter (visible from Drawer and Cars Page)
         function increaseCars() {
             var counter = navigationData[3].counter + 1
             navigationData[3].counter = counter

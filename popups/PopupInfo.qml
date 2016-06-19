@@ -24,6 +24,7 @@ Popup {
                 text: ""
                 color: popupTextColor
                 horizontalAlignment: Text.AlignHCenter
+                wrapMode: Text.WordWrap
             } // popupLabel
         } // row label
         RowLayout {
@@ -47,7 +48,7 @@ Popup {
 
     Timer {
         id: closeTimer
-        interval: 3000
+        interval: 4000
         repeat: false
         onTriggered: {
             popup.close()
