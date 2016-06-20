@@ -48,8 +48,8 @@ This sample app uses Material Design with UI Controls provided by Qt 5.7+ and wa
 
 A detailed description you'll find at my blog: http://bit.ly/qt-drawer-nav-x
 
-### Screenshot Android Portrait
-TBD
+### Screenshot
+![alt tag](https://appbus.files.wordpress.com/2016/06/drawer.png  "Screenshot Android Portrait")
 
 more screenshots here:
 http://bit.ly/qt-drawer-nav-x
