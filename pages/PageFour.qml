@@ -38,6 +38,31 @@ Flickable {
                     wrapMode: Text.WordWrap
                     text: qsTr("Example APP demonstrating Qt Quick Controls 2\n\n")                }
             }
+            RowLayout {
+                LabelSubheading {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Truck is a normal page.\nNavigation Drawer can be opened swiping from left or tapping on Menu Button.\n")
+                }
+            }
+            RowLayout {
+                LabelBodySecondary {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Activation Policy: ")
+                }
+                LabelBody {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("LAZY")
+                }
+            }
             HorizontalDivider {}
         } // col layout
     } // pane root

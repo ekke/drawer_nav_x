@@ -56,6 +56,31 @@ Flickable {
                     wrapMode: Text.WordWrap
                     text: qsTr("Example APP demonstrating Qt Quick Controls 2\n\n")                }
             }
+            RowLayout {
+                LabelSubheading {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Car is a normal Page with a Counter visible in Drawer. Counter can be increased tapping on the 'add' Icon above.\nNavigation Drawer can be opened swiping from left or tapping on Menu Button.\nCar is marked as Favority, so you can also navigate from Bottom (in Portrait Mode)\n")
+                }
+            }
+            RowLayout {
+                LabelBodySecondary {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Activation Policy: ")
+                }
+                LabelBody {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("LAZY")
+                }
+            }
             HorizontalDivider {}
         } // col layout
     } // root

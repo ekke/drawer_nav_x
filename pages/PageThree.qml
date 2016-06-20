@@ -24,9 +24,17 @@ Flickable {
                 leftPadding: 10
                 text: qsTr("GoTo next Subway Station")
             }
-            IconInactive {
-                imageName: modelData.icon
-                imageSize: 48
+            RowLayout {
+                IconInactive {
+                    imageName: modelData.icon
+                    imageSize: 48
+                }
+                Rectangle {
+                    //anchors.right: parent.right
+                    width: 6
+                    height: 48
+                    color: navigationData[myIndex].marker
+                }
             }
             HorizontalDivider {}
             RowLayout {
@@ -37,6 +45,31 @@ Flickable {
                     rightPadding: 10
                     wrapMode: Text.WordWrap
                     text: qsTr("Example APP demonstrating Qt Quick Controls 2\n\n")
+                }
+            }
+            RowLayout {
+                LabelSubheading {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Subway is a normal Page.\nNavigation Drawer can be opened swiping from left or tapping on Menu Button.\nSubway has a colored Marker in Drawer\n")
+                }
+            }
+            RowLayout {
+                LabelBodySecondary {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Activation Policy: ")
+                }
+                LabelBody {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("WHILE SELECTED")
                 }
             }
             HorizontalDivider {}

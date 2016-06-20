@@ -24,9 +24,17 @@ Flickable {
                 leftPadding: 10
                 text: qsTr("Take the next Flight")
             }
-            IconInactive {
-                imageName: modelData.icon
-                imageSize: 48
+            RowLayout {
+                IconInactive {
+                    imageName: modelData.icon
+                    imageSize: 48
+                }
+                Rectangle {
+                    //anchors.right: parent.right
+                    width: 6
+                    height: 48
+                    color: navigationData[myIndex].marker
+                }
             }
             HorizontalDivider {}
             RowLayout {
@@ -37,6 +45,31 @@ Flickable {
                     rightPadding: 10
                     wrapMode: Text.WordWrap
                     text: qsTr("Example APP demonstrating Qt Quick Controls 2\n\n")                }
+            }
+            RowLayout {
+                LabelSubheading {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Flight is a normal Page and has a Marker visible in Drawer.\nNavigation Drawer can be opened swiping from left or tapping on Menu Button.\nFlight is marked as Favority, so you can also navigate from Bottom (in Portrait Mode)\n")
+                }
+            }
+            RowLayout {
+                LabelBodySecondary {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Activation Policy: ")
+                }
+                LabelBody {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("IMMEDIATELY")
+                }
             }
             HorizontalDivider{}
         } // col layout

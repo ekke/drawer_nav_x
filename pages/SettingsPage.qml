@@ -35,6 +35,32 @@ Flickable {
             }
             HorizontalDivider {}
             RowLayout {
+                LabelSubheading {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Settings is a normal Page.\nNavigation Drawer can be opened swiping from left or tapping on Menu Button.\nSettings is marked as favorite, so can be opened from Bottom Navigation (in Portrait Mode)")
+                }
+            }
+            RowLayout {
+                LabelBodySecondary {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Activation Policy: ")
+                }
+                LabelBody {
+                    topPadding: 6
+                    leftPadding: 10
+                    rightPadding: 10
+                    wrapMode: Text.WordWrap
+                    text: qsTr("WHILE SELECTED")
+                }
+            }
+            HorizontalDivider {}
+            RowLayout {
                 Switch {
                     focusPolicy: Qt.NoFocus
                     topPadding: 6
