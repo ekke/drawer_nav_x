@@ -2,336 +2,640 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
-    <name>PageFive</name>
+    <name>AboutPage</name>
     <message>
-        <location filename="../pages/PageFive.qml" line="15"/>
-        <source>Flight</source>
+        <location filename="../pages/AboutPage.qml" line="27"/>
+        <source>About this APP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageFive.qml" line="24"/>
-        <source>Take the next Flight</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../pages/PageFive.qml" line="38"/>
-        <source>Navigate between Destinations:
-* Tap on a Button from ToolBar at Bottom (Portrait) or left side (Landscape)
-
-Tap on &apos;Settings&apos; Button to configure Navigation
-
-From &apos;Option Menu&apos; (three dots) placed top right in Title you can switch Theme and change primary / accent colors
-
-In Landscape mode Title is scrollable.
-
-Bluetooth keyboard attached or BlackBerry PRIV?
-* Type &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos; to go to Button 1...5
+        <location filename="../pages/AboutPage.qml" line="36"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageFive.qml" line="52"/>
-        <source>Init done from Five [4]</source>
+        <location filename="../pages/AboutPage.qml" line="44"/>
+        <source>This Example APP is part of a Blog Series and developed by ekke (@ekkescorner)
+
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageFive.qml" line="56"/>
-        <source>Cleanup done from Five [4]</source>
+        <location filename="../pages/AboutPage.qml" line="54"/>
+        <source>About is a normal Page.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AboutPage.qml" line="63"/>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AboutPage.qml" line="70"/>
+        <source>WHILE SELECTED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AboutPage.qml" line="85"/>
+        <source>Init done from ABOUT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AboutPage.qml" line="89"/>
+        <source>Cleanup done from ABOUT</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>AccentColorPage</name>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="23"/>
+        <source>Select Material Accent Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="69"/>
+        <source>Material Red</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="70"/>
+        <source>Material Pink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="71"/>
+        <source>Material Purple</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="72"/>
+        <source>Material DeepPurple</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="73"/>
+        <source>Material Indigo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="74"/>
+        <source>Material Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="75"/>
+        <source>Material LightBlue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="76"/>
+        <source>Material Cyan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="77"/>
+        <source>Material Teal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="78"/>
+        <source>Material Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="79"/>
+        <source>Material LightGreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="80"/>
+        <source>Material Lime</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="81"/>
+        <source>Material Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="82"/>
+        <source>Material Amber</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="83"/>
+        <source>Material Orange</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="84"/>
+        <source>Material DeepOrange</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="85"/>
+        <source>Material Brown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="86"/>
+        <source>Material Grey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="87"/>
+        <source>Material BlueGrey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="98"/>
+        <source>Init AccentColorPage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/AccentColorPage.qml" line="102"/>
+        <source>Cleanup AccentColorPage</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HomePage</name>
+    <message>
+        <location filename="../pages/HomePage.qml" line="26"/>
+        <source>The Home Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="37"/>
+        <source>This Page is on a StackView - want to push another Page on top ?
+Tap on the &apos;Qt&apos; Logo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="64"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
+
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="73"/>
+        <source>Home Page is a StackView.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+Home Page is marked as Favority, so you can also navigate from Bottom (in Portrait Mode)
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="82"/>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="89"/>
+        <source>IMMEDIATELY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="104"/>
+        <source>Init done from Home Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="108"/>
+        <source>Cleanup done from Home Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InitialItemPage</name>
+    <message>
+        <location filename="../pages/InitialItemPage.qml" line="33"/>
+        <source>Init done from InitialItemPage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/InitialItemPage.qml" line="37"/>
+        <source>Cleanup done from InitialItemPage</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PageFive</name>
+    <message>
+        <location filename="../pages/PageFive.qml" line="25"/>
+        <source>Take the next Flight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFive.qml" line="47"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
+
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFive.qml" line="55"/>
+        <source>Flight is a normal Page and has a Marker visible in Drawer.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+Flight is marked as Favority, so you can also navigate from Bottom (in Portrait Mode)
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFive.qml" line="64"/>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFive.qml" line="71"/>
+        <source>IMMEDIATELY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFive.qml" line="85"/>
+        <source>Init done from Flight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFive.qml" line="89"/>
+        <source>Cleanup done from Flight</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PageFour</name>
     <message>
-        <location filename="../pages/PageFour.qml" line="15"/>
-        <source>Truck</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../pages/PageFour.qml" line="24"/>
+        <location filename="../pages/PageFour.qml" line="25"/>
         <source>Hello Truck Driver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageFour.qml" line="38"/>
-        <source>Navigate between Destinations:
-* Tap on a Button from ToolBar at Bottom (Portrait) or left side (Landscape)
-
-Tap on &apos;Settings&apos; Button to configure Navigation
-
-From &apos;Option Menu&apos; (three dots) placed top right in Title you can switch Theme and change primary / accent colors
-
-In Landscape mode Title is scrollable.
-
-Bluetooth keyboard attached or BlackBerry PRIV?
-* Type &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos; to go to Button 1...5
+        <location filename="../pages/PageFour.qml" line="39"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageFour.qml" line="52"/>
-        <source>Init done from Four [3]</source>
+        <location filename="../pages/PageFour.qml" line="47"/>
+        <source>Truck is a normal page.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../pages/PageFour.qml" line="56"/>
-        <source>Cleanup done from Four [3]</source>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFour.qml" line="63"/>
+        <source>LAZY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFour.qml" line="77"/>
+        <source>Init done from Truck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageFour.qml" line="81"/>
+        <source>Cleanup done from Truck</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PageOne</name>
     <message>
-        <location filename="../pages/PageOne.qml" line="16"/>
-        <source>Car</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../pages/PageOne.qml" line="26"/>
+        <location filename="../pages/PageOne.qml" line="27"/>
         <source>Drive by Car</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageOne.qml" line="39"/>
-        <source>Navigate between Destinations:
-* Tap on a Button from ToolBar at Bottom (Portrait) or left side (Landscape)
-
-Tap on &apos;Settings&apos; Button to configure Navigation
-
-From &apos;Option Menu&apos; (three dots) placed top right in Title you can switch Theme and change primary / accent colors
-
-In Landscape mode Title is scrollable.
-
-Bluetooth keyboard attached or BlackBerry PRIV?
-* Type &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos; to go to Button 1...5</source>
+        <location filename="../pages/PageOne.qml" line="36"/>
+        <location filename="../pages/PageOne.qml" line="46"/>
+        <source>Available Cars: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageOne.qml" line="49"/>
-        <source>In a real-life APP from each Navigation Button you will load StackViews, SwipeViews, TabBars, ... This Example APP only loads simple Pages to demo.</source>
+        <location filename="../pages/PageOne.qml" line="57"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
+
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageOne.qml" line="64"/>
-        <source>Init done from One [0]</source>
+        <location filename="../pages/PageOne.qml" line="65"/>
+        <source>Car is a normal Page with a Counter visible in Drawer. Counter can be increased tapping on the &apos;add&apos; Icon above.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+Car is marked as Favority, so you can also navigate from Bottom (in Portrait Mode)
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageOne.qml" line="68"/>
-        <source>Cleanup done from One [0]</source>
+        <location filename="../pages/PageOne.qml" line="74"/>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageOne.qml" line="81"/>
+        <source>LAZY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageOne.qml" line="96"/>
+        <source>Init done from Car</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageOne.qml" line="100"/>
+        <source>Cleanup done from Car</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PageThree</name>
     <message>
-        <location filename="../pages/PageThree.qml" line="15"/>
-        <source>Subway</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../pages/PageThree.qml" line="24"/>
+        <location filename="../pages/PageThree.qml" line="25"/>
         <source>GoTo next Subway Station</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageThree.qml" line="38"/>
-        <source>Navigate between Destinations:
-* Tap on a Button from ToolBar at Bottom (Portrait) or left side (Landscape)
-
-Tap on &apos;Settings&apos; Button to configure Navigation
-
-From &apos;Option Menu&apos; (three dots) placed top right in Title you can switch Theme and change primary / accent colors
-
-In Landscape mode Title is scrollable.
-
-Bluetooth keyboard attached or BlackBerry PRIV?
-* Type &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos; to go to Button 1...5
+        <location filename="../pages/PageThree.qml" line="47"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageThree.qml" line="51"/>
-        <source>Init done from Three [2]</source>
+        <location filename="../pages/PageThree.qml" line="56"/>
+        <source>Subway is a normal Page.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+Subway has a colored Marker in Drawer
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageThree.qml" line="55"/>
-        <source>Cleanup done from Three [2]</source>
+        <location filename="../pages/PageThree.qml" line="65"/>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageThree.qml" line="72"/>
+        <source>WHILE SELECTED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageThree.qml" line="86"/>
+        <source>Init done from Subway</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageThree.qml" line="90"/>
+        <source>Cleanup done from Subway</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PageTwo</name>
     <message>
-        <location filename="../pages/PageTwo.qml" line="15"/>
-        <source>Bus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../pages/PageTwo.qml" line="24"/>
+        <location filename="../pages/PageTwo.qml" line="25"/>
         <source>Take a Bus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageTwo.qml" line="38"/>
-        <source>Navigate between Destinations:
-* Tap on a Button from ToolBar at Bottom (Portrait) or left side (Landscape)
-
-Tap on &apos;Settings&apos; Button to configure Navigation
-
-From &apos;Option Menu&apos; (three dots) placed top right in Title you can switch Theme and change primary / accent colors
-
-In Landscape mode Title is scrollable.
-
-Bluetooth keyboard attached or BlackBerry PRIV?
-* Type &apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos; to go to Button 1...5
+        <location filename="../pages/PageTwo.qml" line="39"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageTwo.qml" line="51"/>
-        <source>Init done from Two [1]</source>
+        <location filename="../pages/PageTwo.qml" line="48"/>
+        <source>Bus is a normal Page.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/PageTwo.qml" line="55"/>
-        <source>Cleanup done from Two [1]</source>
+        <location filename="../pages/PageTwo.qml" line="57"/>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageTwo.qml" line="64"/>
+        <source>LAZY</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageTwo.qml" line="78"/>
+        <source>Init done from Bus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PageTwo.qml" line="82"/>
+        <source>Cleanup done from Bus</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>PopupPalette</name>
+    <name>PrimaryColorPage</name>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="74"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="23"/>
+        <source>Select Material Primary Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PrimaryColorPage.qml" line="63"/>
         <source>Material Red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="75"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="64"/>
         <source>Material Pink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="76"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="65"/>
         <source>Material Purple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="77"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="66"/>
         <source>Material DeepPurple</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="78"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="67"/>
         <source>Material Indigo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="79"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="68"/>
         <source>Material Blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="80"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="69"/>
         <source>Material LightBlue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="81"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="70"/>
         <source>Material Cyan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="82"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="71"/>
         <source>Material Teal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="83"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="72"/>
         <source>Material Green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="84"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="73"/>
         <source>Material LightGreen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="85"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="74"/>
         <source>Material Lime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="86"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="75"/>
         <source>Material Yellow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="87"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="76"/>
         <source>Material Amber</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="88"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="77"/>
         <source>Material Orange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="89"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="78"/>
         <source>Material DeepOrange</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="90"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="79"/>
         <source>Material Brown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="91"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="80"/>
         <source>Material Grey</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupPalette.qml" line="92"/>
+        <location filename="../pages/PrimaryColorPage.qml" line="81"/>
         <source>Material BlueGrey</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PrimaryColorPage.qml" line="92"/>
+        <source>Init done from PrimaryColorPage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/PrimaryColorPage.qml" line="96"/>
+        <source>Cleanup done from PrimaryColorPage</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>PopupSettings</name>
+    <name>QtPage</name>
     <message>
-        <location filename="../popups/PopupSettings.qml" line="39"/>
-        <source>Settings Navigation Bar</source>
+        <location filename="../pages/QtPage.qml" line="26"/>
+        <source>The Qt Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupSettings.qml" line="47"/>
-        <source>Suppress inactive Labels</source>
+        <location filename="../pages/QtPage.qml" line="37"/>
+        <source>Going Back to Home Page ?
+Tap on the green Arrow to pop() the Page.
+In a real-live APP the TitleBar should show the BACK Button. (Android BACK Button is implemented)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupSettings.qml" line="58"/>
+        <location filename="../pages/QtPage.qml" line="65"/>
+        <source>Example APP demonstrating Qt Quick Controls 2
+
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/QtPage.qml" line="80"/>
+        <source>Init done from QtPage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/QtPage.qml" line="84"/>
+        <source>Cleanup done from Qt Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <location filename="../pages/SettingsPage.qml" line="30"/>
+        <source>Settings Drawer Navigation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/SettingsPage.qml" line="43"/>
+        <source>Settings is a normal Page.
+Navigation Drawer can be opened swiping from left or tapping on Menu Button.
+Settings is marked as favorite, so can be opened from Bottom Navigation (in Portrait Mode)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/SettingsPage.qml" line="52"/>
+        <source>Activation Policy: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/SettingsPage.qml" line="59"/>
+        <source>WHILE SELECTED</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/SettingsPage.qml" line="68"/>
+        <source>Highlight Active Navigation Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/SettingsPage.qml" line="79"/>
         <source>Hide TitleBar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupSettings.qml" line="69"/>
-        <source>NavigationBar Primary Color</source>
+        <location filename="../pages/SettingsPage.qml" line="90"/>
+        <source>Show Favorites at Bottom in Portrait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupSettings.qml" line="81"/>
-        <source>Cancel</source>
+        <location filename="../pages/SettingsPage.qml" line="110"/>
+        <source>Init done from SettingsPage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../popups/PopupSettings.qml" line="91"/>
-        <source>OK</source>
+        <location filename="../pages/SettingsPage.qml" line="114"/>
+        <source>Cleanup done from SettingsPage</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -405,99 +709,48 @@ Bluetooth keyboard attached or BlackBerry PRIV?
     </message>
 </context>
 <context>
-    <name>TitleWithIconTabBar</name>
+    <name>ThemePage</name>
     <message>
-        <location filename="../tabs/TitleWithIconTabBar.qml" line="62"/>
-        <source>Light Theme</source>
+        <location filename="../pages/ThemePage.qml" line="22"/>
+        <source>Select your Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tabs/TitleWithIconTabBar.qml" line="62"/>
+        <location filename="../pages/ThemePage.qml" line="25"/>
         <source>Dark Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tabs/TitleWithIconTabBar.qml" line="68"/>
-        <source>Select Primary Color</source>
+        <location filename="../pages/ThemePage.qml" line="44"/>
+        <source>Init done from Theme Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tabs/TitleWithIconTabBar.qml" line="75"/>
-        <source>Select Accent Color</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TitleWithIconTextTabBar</name>
-    <message>
-        <location filename="../tabs/TitleWithIconTextTabBar.qml" line="62"/>
-        <source>Light Theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tabs/TitleWithIconTextTabBar.qml" line="62"/>
-        <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tabs/TitleWithIconTextTabBar.qml" line="68"/>
-        <source>Select Primary Color</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tabs/TitleWithIconTextTabBar.qml" line="75"/>
-        <source>Select Accent Color</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TitleWithTabBar</name>
-    <message>
-        <location filename="../tabs/TitleWithTabBar.qml" line="61"/>
-        <source>Light Theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tabs/TitleWithTabBar.qml" line="61"/>
-        <source>Dark Theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tabs/TitleWithTabBar.qml" line="67"/>
-        <source>Select Primary Color</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tabs/TitleWithTabBar.qml" line="74"/>
-        <source>Select Accent Color</source>
+        <location filename="../pages/ThemePage.qml" line="48"/>
+        <source>Cleanup done from Theme Page</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.qml" line="129"/>
-        <source>From Bottom to Destinations</source>
+        <location filename="../main.qml" line="170"/>
+        <location filename="../main.qml" line="186"/>
+        <source>From Drawer to Destinations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="149"/>
-        <source>HowTo move from A to B</source>
+        <location filename="../main.qml" line="259"/>
+        <source>Next BACK closes APP and clears Values
+
+Use &apos;Android Home&apos; Button for Fast-Restart.
+
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="212"/>
-        <source>Next time hitting BACK will close the app</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../main.qml" line="318"/>
+        <location filename="../main.qml" line="352"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../main.qml" line="338"/>
-        <source>Settings modified</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
