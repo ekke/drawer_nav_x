@@ -303,11 +303,12 @@ ApplicationWindow {
             if(previousIndex >= 0) {
                 previousItemLoader  = destinations.itemAt(previousIndex)
             }
-            // check for some biz logic from OLD page
+            // because of https://bugreports.qt.io/browse/QTBUG-54260
+            // remember currentIndex before being replaced
             if(rootPane.currentItem.name == "colorSchemaNavPage") {
                 rootPane.currentItem.lastCurrentIndex = rootPane.currentItem.currentIndex
             }
-            // check for some biz logic to be done at NEW page
+            // reset currentIndex to the last one
             if(theItemLoader.item.name == "colorSchemaNavPage") {
                 theItemLoader.item.currentIndex = theItemLoader.item.lastCurrentIndex
             }

@@ -13,7 +13,11 @@ Page {
     // index to get access to Loader (Destination)
     property int myIndex: index
     property string name: "colorSchemaNavPage"
+
+    // because of https://bugreports.qt.io/browse/QTBUG-54260
+    // lastCurrentIndex will remember currentIndex, so we can reset before Page becomes currentItem on StackView
     property int lastCurrentIndex: 0
+
     property alias currentIndex: navPane.currentIndex
 
     property bool tabBarIsFixed: true
