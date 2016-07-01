@@ -1,4 +1,4 @@
-# swiped_pages_x APP for Qt 5.7
+# drawer_nav_x APP for Qt 5.7
 If not otherwise mentioned inside source files (*.cpp, *.hpp, *.qml):
 
 ##Author: 

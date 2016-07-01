@@ -1,4 +1,4 @@
-# bottom_nav_x
+# drawer_nav_x
 Sample APP - Qt 5.7+ - Android iOS
 
 [AUTHOR ( ekke )](AUTHOR.md)
