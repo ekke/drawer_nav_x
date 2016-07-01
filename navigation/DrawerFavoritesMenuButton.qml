@@ -7,8 +7,8 @@ import QtQuick.Controls.Material 2.0
 ToolButton {
     Layout.alignment: Qt.AlignHCenter
     focusPolicy: Qt.NoFocus
-    height: 56
-    implicitWidth: 36
+    implicitHeight: 56
+    implicitWidth: 56
     Item {
         anchors.horizontalCenter: parent.horizontalCenter
         height: 36

@@ -11,8 +11,8 @@ ToolButton {
     property bool isActive: modelData == navigationIndex
     Layout.alignment: Qt.AlignHCenter
     focusPolicy: Qt.NoFocus
-    height: 56
-    width: myBar.width / (favoritesModel.length + 1)
+    implicitHeight: 56
+    implicitWidth: (myBar.width - 56 - 6) / (favoritesModel.length)
     Column {
         spacing: 0
         topPadding: 0
