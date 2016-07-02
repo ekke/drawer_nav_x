@@ -211,14 +211,13 @@ ApplicationWindow {
 
         // shows a Busy indicator - probably not noticed yet
         // but in real life app loading first Page or Pane could took some time if heavy
-        initialItem: initialPlaceholder
-
         Loader {
             id: initialPlaceholder
             source: "../pages/InitialItemPage.qml"
             active: true
             visible: false
             onLoaded: {
+                rootPane.initialItem = item
                 item.init()
             }
         }
