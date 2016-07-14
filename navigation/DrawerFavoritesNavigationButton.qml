@@ -17,6 +17,7 @@ ToolButton {
         spacing: 0
         topPadding: 0
         anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
         Item {
             anchors.horizontalCenter: parent.horizontalCenter
             width: 24

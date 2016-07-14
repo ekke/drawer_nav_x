@@ -9,16 +9,22 @@ ToolButton {
     focusPolicy: Qt.NoFocus
     implicitHeight: 56
     implicitWidth: 56
-    Item {
+    Column {
+        spacing: 0
+        topPadding: 0
         anchors.horizontalCenter: parent.horizontalCenter
-        height: 36
-        Image {
+        anchors.verticalCenter: parent.verticalCenter
+        Item {
+            anchors.horizontalCenter: parent.horizontalCenter
             height: 24
             width: 24
-            verticalAlignment: Image.AlignVCenter
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
-            source: "qrc:/images/"+iconFolder+"/menu.png"
+            Image {
+                height: 24
+                width: 24
+                verticalAlignment: Image.AlignTop
+                anchors.horizontalCenter: parent.horizontalCenter
+                source: "qrc:/images/"+iconFolder+"/menu.png"
+            }
         }
     }
     onClicked: {

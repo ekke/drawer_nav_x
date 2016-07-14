@@ -14,6 +14,7 @@ Pane {
     property real inactiveOpacity: iconFolder == "black" ? 0.26 : 0.56
     leftPadding: 0
     rightPadding: 0
+    topPadding: 0
     height: isDarkTheme? 56 + darkDivider.height : 56
     // Using Divider as workaround for bug:
     // Material.elevation: 8 not 'visible' if dark theme
