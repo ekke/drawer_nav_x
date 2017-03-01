@@ -39,7 +39,7 @@ This app needs Qt 5.7 Release or greater
 [see LICENSE ( The Unlicense )](LICENSE)
 
 Images downloaded from https://design.google.com/icons/ - then renamed to match Qt High DPI images- and project-specific- naming
-(2 Images from Qt 5.7 Galelry APP in images/extra)
+(2 Images from Qt 5.7 Gallery APP in images/extra)
 
 [see /images/LICENSE ( cc-by )](images/LICENSE)
 
