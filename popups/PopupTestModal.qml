@@ -5,12 +5,15 @@ import "../common"
 
 Popup {
     id: popup
+    closePolicy: Popup.NoAutoClose
     property alias text: popupLabel.text
     property alias buttonText: okButton.text
+    z: 3
     x: (parent.width - width) / 2
     y: (parent.height - height) / 2
     implicitHeight: 240
     implicitWidth: parent.width * .9
+    modal: true
     ColumnLayout {
         anchors.right: parent.right
         anchors.left: parent.left
@@ -30,7 +33,7 @@ Popup {
         RowLayout {
             ButtonFlat {
                 id: okButton
-                text: ""
+                text: "Close"
                 textColor: accentColor
                 onClicked: {
                     popup.close()
@@ -40,21 +43,11 @@ Popup {
     } // col layout
 
     onAboutToHide: {
-        stopTimer()
+        appWindow.backKeyBlocked = false
     }
     onAboutToShow: {
-        closeTimer.start()
+        appWindow.backKeyBlocked = true
     }
 
-    Timer {
-        id: closeTimer
-        interval: 4000
-        repeat: false
-        onTriggered: {
-            popup.close()
-        }
-    }
-    function stopTimer() {
-        closeTimer.stop()
-    }
+
 } // popup

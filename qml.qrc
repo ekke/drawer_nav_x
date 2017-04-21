@@ -55,5 +55,6 @@
         <file>pages/ThemePage.qml</file>
         <file>navigation/HomeNavigation.qml</file>
         <file>pages/QtPage.qml</file>
+        <file>popups/PopupTestModal.qml</file>
     </qresource>
 </RCC>

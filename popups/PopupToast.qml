@@ -6,6 +6,7 @@ import "../common"
 
 Popup {
     id: popup
+    property alias text: toastLabel.text
     closePolicy: Popup.NoAutoClose
     bottomMargin: isLandscape? 24 : 80
     x: (appWindow.width - width) / 2

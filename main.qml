@@ -24,6 +24,8 @@ ApplicationWindow {
     //
     property bool isLandscape: width > height
 
+    property bool backKeyBlocked: false
+
     // primary and accent properties:
     property variant primaryPalette: myApp.defaultPrimaryPalette()
     property color primaryLightColor: primaryPalette[0]
@@ -244,9 +246,18 @@ ApplicationWindow {
         // or to exit the app
         property bool firstPageInfoRead: false
         Keys.onBackPressed: {
+            if(backKeyBlocked) {
+                event.accepted = true
+                firstPageInfoRead = false
+                showToast(qsTr("Back key blocked while modal Popup on top"))
+                return
+            }
+
+
             if(navigationIndex == 0 && destinations.itemAt(navigationIndex).item.depth > 1) {
                 destinations.itemAt(navigationIndex).item.pop()
                 event.accepted = true
+                firstPageInfoRead = false
                 return
             }
 
@@ -360,6 +371,11 @@ ApplicationWindow {
             resetFocus()
         }
     } // popupInfo
+
+    function showToast(info) {
+        popupToast.text = info
+        popupToast.open()
+    }
 
     // PopupToast
     PopupToast {

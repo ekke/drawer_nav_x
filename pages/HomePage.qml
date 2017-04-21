@@ -6,6 +6,7 @@ import QtQuick.Controls.Material 2.1
 import QtGraphicalEffects 1.0
 
 import "../common"
+import "../popups"
 
 Flickable {
     id: flickable
@@ -90,9 +91,27 @@ Flickable {
                 }
             }
             HorizontalDivider {}
+
+            RowLayout {
+                ButtonFlat {
+                    text: qsTr("Modal Popup Test")
+
+                    onClicked: {
+                        popupTestModal.open()
+                    }
+                }
+            }
+
+            HorizontalDivider {}
         } // col layout
     } // root
     ScrollIndicator.vertical: ScrollIndicator { }
+
+    PopupTestModal {
+        id: popupTestModal
+        text: qsTr("While this modal Popup is open:\n\nDrawer should be blocked\nAndroid Back key should be blocked\n\nQt 5.8 problem: Drawer can be dragged below the modal Popup")
+    }
+
 
     // emitting a Signal could be another option
     Component.onDestruction: {
