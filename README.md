@@ -1,5 +1,5 @@
 # drawer_nav_x
-Sample APP - Qt 5.7+ - Android iOS
+Sample APP - Qt 5.9.1+ - Android iOS
 
 [AUTHOR ( ekke )](AUTHOR.md)
 
@@ -33,7 +33,7 @@ This 6th sample app is a simple app only to demonstrate navigation through compl
 read more about this app here:
 http://bit.ly/qt-drawer-nav-x
 
-This app needs Qt 5.7 Release or greater
+This app needs Qt 5.9.1 Release or greater
 
 ## License Information
 [see LICENSE ( The Unlicense )](LICENSE)
@@ -44,7 +44,7 @@ Images downloaded from https://design.google.com/icons/ - then renamed to match 
 [see /images/LICENSE ( cc-by )](images/LICENSE)
 
 ## Screenshots
-This sample app uses Material Design with UI Controls provided by Qt 5.7+ and was designed and tested on Android (BlackBerry PRIV Android 6.0.1) and iOS (iPhone 6s iOS 9.3).
+This sample app uses Material Design with UI Controls provided by Qt 5.9.1+ and was designed and tested on Android (BlackBerry PRIV Android 6.0.1) and iOS (iPhone 6s iOS 9.3).
 
 A detailed description you'll find at my blog: http://bit.ly/qt-drawer-nav-x
 
