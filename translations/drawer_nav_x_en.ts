@@ -166,25 +166,25 @@ Navigation Drawer can be opened swiping from left or tapping on Menu Button.
 <context>
     <name>HomePage</name>
     <message>
-        <location filename="../pages/HomePage.qml" line="26"/>
+        <location filename="../pages/HomePage.qml" line="27"/>
         <source>The Home Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/HomePage.qml" line="37"/>
+        <location filename="../pages/HomePage.qml" line="38"/>
         <source>This Page is on a StackView - want to push another Page on top ?
 Tap on the &apos;Qt&apos; Logo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/HomePage.qml" line="64"/>
+        <location filename="../pages/HomePage.qml" line="65"/>
         <source>Example APP demonstrating Qt Quick Controls 2
 
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/HomePage.qml" line="73"/>
+        <location filename="../pages/HomePage.qml" line="74"/>
         <source>Home Page is a StackView.
 Navigation Drawer can be opened swiping from left or tapping on Menu Button.
 Home Page is marked as Favority, so you can also navigate from Bottom (in Portrait Mode)
@@ -192,22 +192,37 @@ Home Page is marked as Favority, so you can also navigate from Bottom (in Portra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/HomePage.qml" line="82"/>
+        <location filename="../pages/HomePage.qml" line="83"/>
         <source>Activation Policy: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/HomePage.qml" line="89"/>
+        <location filename="../pages/HomePage.qml" line="90"/>
         <source>IMMEDIATELY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/HomePage.qml" line="104"/>
+        <location filename="../pages/HomePage.qml" line="97"/>
+        <source>Modal Popup Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="112"/>
+        <source>While this modal Popup is open:
+
+Drawer should be blocked
+Android Back key should be blocked
+
+Qt 5.8 problem: Drawer can be dragged below the modal Popup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pages/HomePage.qml" line="123"/>
         <source>Init done from Home Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../pages/HomePage.qml" line="108"/>
+        <location filename="../pages/HomePage.qml" line="127"/>
         <source>Cleanup done from Home Page</source>
         <translation type="unfinished"></translation>
     </message>
@@ -642,22 +657,22 @@ Settings is marked as favorite, so can be opened from Bottom Navigation (in Port
 <context>
     <name>SimpleTextTitle</name>
     <message>
-        <location filename="../common/SimpleTextTitle.qml" line="39"/>
+        <location filename="../common/SimpleTextTitle.qml" line="42"/>
         <source>Light Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/SimpleTextTitle.qml" line="39"/>
+        <location filename="../common/SimpleTextTitle.qml" line="42"/>
         <source>Dark Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/SimpleTextTitle.qml" line="45"/>
+        <location filename="../common/SimpleTextTitle.qml" line="48"/>
         <source>Select Primary Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/SimpleTextTitle.qml" line="52"/>
+        <location filename="../common/SimpleTextTitle.qml" line="55"/>
         <source>Select Accent Color</source>
         <translation type="unfinished"></translation>
     </message>
@@ -665,22 +680,22 @@ Settings is marked as favorite, so can be opened from Bottom Navigation (in Port
 <context>
     <name>StackTextTitle</name>
     <message>
-        <location filename="../common/StackTextTitle.qml" line="52"/>
+        <location filename="../common/StackTextTitle.qml" line="55"/>
         <source>Light Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/StackTextTitle.qml" line="52"/>
+        <location filename="../common/StackTextTitle.qml" line="55"/>
         <source>Dark Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/StackTextTitle.qml" line="58"/>
+        <location filename="../common/StackTextTitle.qml" line="61"/>
         <source>Select Primary Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/StackTextTitle.qml" line="65"/>
+        <location filename="../common/StackTextTitle.qml" line="68"/>
         <source>Select Accent Color</source>
         <translation type="unfinished"></translation>
     </message>
@@ -688,22 +703,22 @@ Settings is marked as favorite, so can be opened from Bottom Navigation (in Port
 <context>
     <name>SwipeTextTitle</name>
     <message>
-        <location filename="../common/SwipeTextTitle.qml" line="53"/>
+        <location filename="../common/SwipeTextTitle.qml" line="56"/>
         <source>Light Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/SwipeTextTitle.qml" line="53"/>
+        <location filename="../common/SwipeTextTitle.qml" line="56"/>
         <source>Dark Theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/SwipeTextTitle.qml" line="59"/>
+        <location filename="../common/SwipeTextTitle.qml" line="62"/>
         <source>Select Primary Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../common/SwipeTextTitle.qml" line="66"/>
+        <location filename="../common/SwipeTextTitle.qml" line="69"/>
         <source>Select Accent Color</source>
         <translation type="unfinished"></translation>
     </message>
@@ -734,13 +749,18 @@ Settings is marked as favorite, so can be opened from Bottom Navigation (in Port
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.qml" line="170"/>
-        <location filename="../main.qml" line="186"/>
+        <location filename="../main.qml" line="172"/>
+        <location filename="../main.qml" line="188"/>
         <source>From Drawer to Destinations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="259"/>
+        <location filename="../main.qml" line="252"/>
+        <source>Back key blocked while modal Popup on top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="269"/>
         <source>Next BACK closes APP and clears Values
 
 Use &apos;Android Home&apos; Button for Fast-Restart.
@@ -749,7 +769,7 @@ Use &apos;Android Home&apos; Button for Fast-Restart.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.qml" line="352"/>
+        <location filename="../main.qml" line="363"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
