@@ -12,14 +12,12 @@ HEADERS += \
 SOURCES += main.cpp \
     applicationui.cpp
 
-lupdate_only {
-    SOURCES +=  main.qml \
+OTHER_FILES +=  main.qml \
     common/*.qml \
     navigation/*.qml \
     pages/*.qml \
     popups/*.qml \
     tabs/*.qml
-}
 
 OTHER_FILES += images/black/*.png \
     images/black/x18/*.png \
